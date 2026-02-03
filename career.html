@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profile Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/profil_desa/" />
+
+    <!-- SCOPE MOBILE VERSION RESPONSIVE -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <!-- THEME -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Profile Desa Susukan" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="theme-color" content="#F17127" />
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- CSS -->
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+
+    <style>
+      /* NAVBAR TIDAK DIUBAH */
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px;
+        width: auto;
+        display: block;
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+
+      /* FIX LOGO FOOTER */
+      footer.footer-wrapper .box-footer .image img {
+        width: 300px;
+        height: auto;
+        transform: none !important;
+      }
+
+      /* ===== RAPihin tampilan list-career (biar jarak gak kejauhan) ===== */
+      .list-career {
+        padding: 55px 0 !important;
+      }
+      .list-career .content .title {
+        margin-bottom: 10px;
+        line-height: 1.2;
+      }
+      .list-career .content .desc {
+        margin-bottom: 15px;
+        line-height: 1.6;
+      }
+
+      /* Biar deskripsi panjang gak bikin section jadi tinggi banget */
+      .list-career .content .desc.limit-4 {
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      /* Clear float tiap container */
+      .list-career .container:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+
+      /* Samakan tinggi gambar biar rapi */
+      .image-career img {
+        width: 100%;
+        height: 260px;
+        object-fit: cover;
+        border-radius: 6px;
+      }
+    </style>
+
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- NAVBAR -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/remove.png" alt="Desa Susukan" />
+                </a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li><a href="aboutus.html">Tentang Desa</a></li>
+                  <li><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li class="active"><a href="career.html">Informasi</a></li>
+                  <li><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- SUB HEADER -->
+      <section class="sub-header parallax-apecsa bg-portfolio">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="title">Keunggulan Desa</div>
+            <div class="description">
+              Di bawah naungan BUMDes, Desa Susukan memiliki beberapa kegiatan
+              dan unit usaha unggulan yang mendukung ekonomi, ketahanan pangan,
+              dan kebersamaan warga.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 1) SEPAKBOLA -->
+      <section class="list-career bg-gray">
+        <div class="container">
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">Sepak Bola "Susukan Youth United"</div>
+              <div class="desc">
+                Sepak bola “Susukan Youth United” merupakan kegiatan olahraga
+                rutin yang melibatkan pemuda dan warga Desa Susukan. Program ini
+                menjadi wadah pembinaan bakat, menjaga kebugaran, serta
+                mempererat kekompakan antarwarga melalui latihan dan
+                pertandingan persahabatan. Kegiatan ini juga mendorong semangat
+                sportivitas, disiplin, dan kebersamaan generasi muda di desa.
+              </div>
+              <a
+                href="career_detail.html?item=sepakbola"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="image-career">
+              <img
+                src="assets/images/career/bola_1.jpeg"
+                alt="Sepak Bola Susukan Youth United"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 2) AGUNA JAYA FARM -->
+      <section class="list-career bg-white">
+        <div class="container">
+          <div class="col-md-5">
+            <div class="image-career">
+              <img
+                src="assets/images/career/aguna.jpeg"
+                alt="Aguna Jaya Farm"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">Aguna Jaya Farm</div>
+              <div class="desc">
+                Aguna Jaya Farm adalah usaha peternakan kambing daging yang
+                dikelola masyarakat Desa Susukan di bawah naungan BUMDes sebagai
+                penguatan ekonomi desa. Selain menghasilkan ternak yang sehat
+                dan berkualitas, usaha ini menerapkan konsep terpadu dengan
+                memanfaatkan urine dan kotoran kambing sebagai bahan pupuk
+                organik. Pemanfaatan limbah ternak tersebut mendukung usaha
+                pertanian warga sehingga tercipta siklus usaha yang ramah
+                lingkungan, hemat biaya, dan bernilai tambah.
+              </div>
+              <a
+                href="career_detail.html?item=aguna"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 3) PERTANIAN -->
+      <section class="list-career bg-gray">
+        <div class="container">
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">PERTANIAN</div>
+              <div class="desc">
+                Sektor pertanian Desa Susukan menjadi salah satu penopang utama
+                ketahanan pangan. Gapoktan dan Kelompok Wanita Tani (KWT)
+                berperan sebagai garda terdepan dalam pemanfaatan sawah dan
+                lahan produktif warga, mulai dari pengolahan lahan, perawatan,
+                hingga panen. Melalui gotong royong dan pendampingan kelompok,
+                pertanian desa diharapkan semakin mandiri, produktif, dan mampu
+                menjaga ketersediaan pangan bagi masyarakat.
+              </div>
+              <a
+                href="career_detail.html?item=pertanian"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="image-career">
+              <img
+                src="assets/images/career/tani.jpeg"
+                alt="Pertanian Desa Susukan"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) UMKM -->
+      <section class="list-career bg-white">
+        <div class="container">
+          <div class="col-md-5">
+            <div class="image-career">
+              <img
+                src="assets/images/career/umkm.jpeg"
+                alt="UMKM Desa Susukan"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">UMKM</div>
+              <div class="desc limit-4">
+                UMKM Desa Susukan tumbuh dari kreativitas warga yang banyak
+                memproduksi barang dan makanan rumahan (home made), seperti
+                kuliner, jajanan, olahan hasil pertanian, kerajinan, hingga
+                kebutuhan harian. Walaupun sebagian produk masih belum dikenal
+                luas, pelaku UMKM terus berupaya meningkatkan kualitas, kemasan,
+                dan pemasaran. Dengan dukungan desa, UMKM diharapkan dapat naik
+                kelas dan menjadi penggerak ekonomi keluarga di Desa Susukan.
+              </div>
+              <a
+                href="career_detail.html?item=umkm"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5) DEPOT AIR -->
+      <section class="list-career bg-gray">
+        <div class="container">
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">DEPOT AIR ISI ULANG</div>
+              <div class="desc">
+                Depot Air Isi Ulang merupakan unit usaha BUMDes Susukan yang
+                menyediakan layanan air minum isi galon bagi warga. Kehadiran
+                depot ini memudahkan masyarakat mendapatkan air minum dengan
+                harga terjangkau dan kualitas yang terjaga. Selain melayani
+                kebutuhan rumah tangga, depot air juga menjadi salah satu sumber
+                pendapatan desa yang dikelola secara berkelanjutan untuk
+                mendukung program pembangunan dan pelayanan masyarakat.
+              </div>
+              <a
+                href="career_detail.html?item=depot"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="image-career">
+              <img
+                src="assets/images/career/air.jpeg"
+                alt="Depot Air Isi Ulang BUMDes Susukan"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 4) UMKM -->
+      <section class="list-career bg-white">
+        <div class="container">
+          <div class="col-md-5">
+            <div class="image-career">
+              <img src="assets/images/career/tpq.jpeg" alt="TPQ Desa Susukan" />
+            </div>
+          </div>
+
+          <div class="col-md-7">
+            <div class="content">
+              <div class="title">TPQ Darussalam</div>
+              <div class="desc limit-4">
+                Taman Pendidikan Al-Qur’an (TPQ) Desa Susukan merupakan lembaga
+                pendidikan nonformal yang berperan penting dalam membina
+                generasi muda agar mampu membaca, memahami, dan mengamalkan
+                ajaran Al-Qur’an sejak usia dini. Kegiatan TPQ dilaksanakan
+                secara rutin pada sore hari di mushola atau masjid desa, dengan
+                bimbingan para ustadz dan ustadzah yang penuh dedikasi. Selain
+                pembelajaran membaca Al-Qur’an dan Iqro, TPQ juga menanamkan
+                nilai-nilai akhlak mulia, kedisiplinan, serta kebiasaan ibadah
+                seperti shalat dan doa sehari-hari. Suasana belajar dibuat
+                menyenangkan dan kekeluargaan agar anak-anak merasa nyaman dan
+                semangat dalam menuntut ilmu agama. Keberadaan TPQ di Desa
+                Susukan menjadi pondasi penting dalam membentuk karakter
+                religius generasi penerus desa, sekaligus memperkuat kehidupan
+                spiritual masyarakat secara keseluruhan.
+              </div>
+              <a
+                href="career_detail.html?item=tpq"
+                class="btn btn-lg btn-apecsa-red"
+              >
+                <i class="fa fa-search"></i> Lihat detail
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img
+                  src="assets/images/logo/background.png"
+                  alt="Desa Susukan"
+                />
+              </div>
+
+              <div class="social-media">
+                <a href="#" class="btn btn-default btn-social-media facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media instagram">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <a
+        href=""
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Back to top"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.scrolltofixed.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.scrollspeed.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Tahun otomatis
+      var el = document.getElementById("year");
+      if (el) el.innerText = new Date().getFullYear();
+    </script>
+  </body>
+</html>

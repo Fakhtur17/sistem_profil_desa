@@ -1,0 +1,659 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profile Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/profil_desa/" />
+    <!-- SCOPE MOBILE VERSION RESPONSIVE -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <!-- SCOPE ADD TO HOMESCREEN AND THEME COLOR -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="PT. Apecsa Optima Solusi"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- SCOPE COLOR FOR BROWSER CHROME, FIREFOX AND OPERA -->
+    <meta name="theme-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER WINDOWS PHONE -->
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER IOS, SAFARI BROWSER -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- SCOPE SHARE FACEBOOK -->
+    <meta property="og:url" content="http://urlnya.com/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:description" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:image" content="URL IMAGE WEBSITE" />
+
+    <!-- SCOPE SHARE TWITTER -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="apecsa" />
+    <meta name="twitter:title" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:description" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:creator" content="Fathan Rohman" />
+    <meta
+      name="twitter:image:src"
+      content="https://website.com/image250X250.png"
+    />
+    <meta name="twitter:domain" content="website.com" />
+
+    <!-- SCOPE SHARE GOOGLE PLUS -->
+    <meta itemprop="name" content="PT. Apecsa Optima Solusi" />
+    <meta
+      itemprop="description"
+      content="Apecsa Optima Solusi (ApecsaOS) Bergerak di jasa pembuatan aplikasi, e-gov, erp, custom software, mobile application"
+    />
+    <meta itemprop="image" content="https://website.com/image250X250.png" />
+
+    <!-- SCOPE STLYESHEET -->
+    <link
+      rel="icon"
+      type="image/ico"
+      href="assets/images/logo/background.png"
+    />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <!-- http://devicon.fr/ -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+    <style>
+      /* NAVBAR TIDAK DIUBAH */
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+
+      /* BRAND TETAP NORMAL */
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+
+      /* LOGO SAJA YANG DIBESARKAN */
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px; /* dasar */
+        width: auto;
+        display: block;
+
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+
+      /* ========= FIX LOGO FOOTER (BIAR AMAN DAN GAK IKUT KEPAKSA) ========= */
+      footer.footer-wrapper .box-footer .image img {
+        width: 300px; /* atur sesuai kebutuhan */
+        height: auto;
+
+        transform: none !important;
+      }
+      /* ====== CUSTOM TEKNOLOGI DESA ====== */
+      .technologies-we-use .box-list-tech {
+        text-align: center;
+        padding: 22px 12px;
+        margin-bottom: 18px;
+        border-radius: 10px;
+        background: #fff;
+        box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+        transition: all 0.2s ease;
+        min-height: 140px;
+      }
+      .technologies-we-use .box-list-tech:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+      }
+      .technologies-we-use .box-list-tech i {
+        font-size: 38px;
+        margin-bottom: 10px;
+        display: block;
+      }
+      .technologies-we-use .tech-label {
+        font-size: 14px;
+        font-weight: 600;
+        line-height: 1.3;
+      }
+
+      /* responsif rapihin tinggi */
+      @media (max-width: 767px) {
+        .technologies-we-use .box-list-tech {
+          min-height: 120px;
+          padding: 18px 10px;
+        }
+        .technologies-we-use .box-list-tech i {
+          font-size: 32px;
+        }
+      }
+    </style>
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- START SCOPE HEADER -->
+      <!-- <header class="header-wrapper">
+        <div class="container">
+          <div class="box-header">
+            <div class="introduce">
+              <span>
+                Selamat datang di PT. Apecsa Optima Solusi
+              </span>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <span>admin@apecsa-indonesia.com</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <span>(021) 234 454</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-map-marker"></i>
+                  </div>
+                  <span>Cilandak, Jakarta Selatan</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header> -->
+      <!-- END SCOPE HEADER -->
+
+      <!-- START SCOPE NAVBAR BOOTSTRAP -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/remove.png" alt="ApecsaOS" />
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li><a href="aboutus.html">Tentang Desa</a></li>
+                  <li class="active"><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li><a href="career.html">Informasi</a></li>
+                  <li><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- END SCOPE NAVBAR BOOTSTRAP -->
+
+      <!-- START SCOPE SUB HEADER -->
+      <section class="sub-header parallax-apecsa bg-service">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="title">Layanan pemerintahan</div>
+            <div class="description">
+              Desa Susukan menyediakan berbagai layanan administrasi,
+              pemerintahan, dan kemasyarakatan yang bertujuan untuk memberikan
+              kemudahan, kecepatan, serta transparansi kepada seluruh masyarakat
+              desa dalam mengurus kebutuhan administrasi dan informasi desa.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE SUB HEADER -->
+
+      <!-- START SCOPE WHAT WE DO -->
+      <section class="development-categories bg-gray">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-section">Pelayanan Desa Susukan</span>
+              </div>
+              <div class="desc color-black">
+                Pemerintah Desa Susukan memberikan berbagai layanan administrasi
+                dan informasi publik untuk mendukung kebutuhan masyarakat secara
+                cepat, mudah, dan transparan.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="box-categories">
+                <div class="col-md-4">
+                  <div class="list-categories">
+                    <div class="box-icon">
+                      <div class="icon bg-red-light">
+                        <i class="fa fa-user"></i>
+                      </div>
+                    </div>
+                    <div class="title">Administrasi Kependudukan</div>
+                    <div class="description">
+                      <p>
+                        Pelayanan surat keterangan domisili, usaha, kelahiran,
+                        kematian, pindah datang, pengantar KTP dan Kartu
+                        Keluarga untuk mendukung kebutuhan administrasi
+                        masyarakat Desa Susukan.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="list-categories">
+                    <div class="box-icon">
+                      <div class="icon bg-red-light">
+                        <i class="fa fa-building"></i>
+                      </div>
+                    </div>
+                    <div class="title">Pelayanan Pemerintahan Desa</div>
+                    <div class="description">
+                      <p>
+                        Penyediaan layanan administrasi pemerintahan desa,
+                        informasi kebijakan, pengesahan dokumen resmi, serta
+                        transparansi kegiatan dan program desa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="list-categories">
+                    <div class="box-icon">
+                      <div class="icon bg-red-light">
+                        <i class="fa fa-server"></i>
+                      </div>
+                    </div>
+                    <div class="title">Pelayanan Sosial & Usaha</div>
+                    <div class="description">
+                      <p>
+                        Layanan surat keterangan usaha, izin kegiatan
+                        masyarakat, laporan hajatan, serta dukungan administrasi
+                        bagi pelaku usaha dan kegiatan sosial warga desa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE WHAT WE DO -->
+
+      <!-- START SCOPE BUSSINESS PROCCESS DETAIL -->
+      <!-- <section class="bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Business process</span>
+              </div>
+              <div class="desc color-black">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro eaque, quisquam blanditiis, voluptatibus, delectus nesciunt tenetur cupiditate quae facere voluptates nihil saepe tempora laboriosam alias a quod! Libero, ipsum, blanditiis.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-8 col-md-offset-2">
+            <ul class="timeline">
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="timeline-badge"><i class="fa fa-check"></i></div>
+                <div class="timeline-panel">
+                  <div class="timeline-heading">
+                    <h4 class="timeline-title">Title</h4>
+                  </div>
+                  <div class="timeline-body">
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod maxime pariatur cupiditate, modi vel deserunt, velit minus tenetur optio, qui sit nemo itaque obcaecati! Quidem unde eveniet reprehenderit aspernatur, vero!
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section> -->
+      <!-- END SCOPE BUSSINESS PROCCESS DETAIL -->
+
+      <!-- START SCOPE DEVELOPMENT PROCESS -->
+      <!-- <section class="development-process-detail bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Development process</span>
+              </div>
+              <div class="desc color-black">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+      <!-- END SCOPE DEVELOPMENT PROCESS -->
+
+      <!-- START SCOPE BUSSINES MODEL -->
+
+      <!-- END SCOPE BUSSINES MODEL -->
+
+      <!-- START SCOPE TECHNOLOGIES WE USE-->
+      <!-- START SCOPE TEKNOLOGI & SISTEM DIGITAL DESA -->
+      <section class="technologies-we-use">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-section">Sistem Digital Desa Susukan</span>
+              </div>
+              <div class="desc color-black">
+                Inovasi layanan berbasis teknologi untuk mempercepat pelayanan,
+                meningkatkan transparansi, dan memudahkan akses informasi bagi
+                masyarakat.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-techno">
+                <!-- 1 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Pengajuan surat dari rumah"
+                  >
+                    <i class="fa fa-file-text-o"></i>
+                    <div class="tech-label">Surat Online</div>
+                  </div>
+                </div>
+
+                <!-- 2 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Data warga terintegrasi & ter-update"
+                  >
+                    <i class="fa fa-database"></i>
+                    <div class="tech-label">Data Kependudukan</div>
+                  </div>
+                </div>
+
+                <!-- 3 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Berita, pengumuman, agenda desa"
+                  >
+                    <i class="fa fa-bullhorn"></i>
+                    <div class="tech-label">Info & Pengumuman</div>
+                  </div>
+                </div>
+
+                <!-- 4 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Informasi APBDes & realisasi kegiatan"
+                  >
+                    <i class="fa fa-line-chart"></i>
+                    <div class="tech-label">Transparansi</div>
+                  </div>
+                </div>
+
+                <!-- 5 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Aspirasi warga & pengaduan layanan"
+                  >
+                    <i class="fa fa-comments-o"></i>
+                    <div class="tech-label">Pengaduan Warga</div>
+                  </div>
+                </div>
+
+                <!-- 6 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Peta fasilitas umum, UMKM, potensi desa"
+                  >
+                    <i class="fa fa-map-marker"></i>
+                    <div class="tech-label">Peta Desa</div>
+                  </div>
+                </div>
+
+                <!-- 7 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Jam layanan, estimasi, dan antrean"
+                  >
+                    <i class="fa fa-clock-o"></i>
+                    <div class="tech-label">Jadwal Layanan</div>
+                  </div>
+                </div>
+
+                <!-- 8 -->
+                <div class="col-md-3 col-sm-4 col-xs-6">
+                  <div
+                    class="box-list-tech"
+                    data-toggle="tooltip"
+                    data-placement="top"
+                    title="Dokumentasi kegiatan dan program desa"
+                  >
+                    <i class="fa fa-picture-o"></i>
+                    <div class="tech-label">Galeri Kegiatan</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE TEKNOLOGI & SISTEM DIGITAL DESA -->
+
+      <!-- END SCOPE TECHNOLOGIES WE USE-->
+
+      <!-- START SCOPE CAREER INTRODUCE -->
+      <section class="parallax-apecsa bg-img-1 introduce-wrapper portfolio">
+        <div class="bg-overlay-full"></div>
+
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center">
+              <div class="box-title-desc">
+                <!-- JUDUL -->
+                <div class="title color-white mb-3">
+                  <span class="color-white">Pelayanan Desa</span>
+                </div>
+
+                <!-- DESKRIPSI -->
+                <div class="desc color-white mb-4">
+                  Pelayanan Desa merupakan bentuk komitmen pemerintah desa dalam
+                  memberikan layanan administrasi dan informasi kepada
+                  masyarakat secara cepat, mudah, dan transparan. Melalui
+                  website pelayanan desa, masyarakat dapat mengakses berbagai
+                  layanan seperti pengurusan surat keterangan, data
+                  kependudukan, serta informasi resmi desa tanpa harus datang
+                  langsung ke kantor desa.
+                </div>
+
+                <!-- TOMBOL -->
+                <a
+                  href="https://pelayanan.desa-susukan.id"
+                  class="btn btn-primary btn-lg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <i class="fa fa-external-link-alt"></i>
+                  Akses Website Pelayanan Desa
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- START SCOPE FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img src="assets/images/logo/background.png" alt="" />
+              </div>
+              <div class="social-media">
+                <a href="#" class="btn btn-default btn-social-media facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media instagram">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END SCOPE FOOTER -->
+      <a
+        href=""
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Back to top"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </body>
+
+  <!-- SCOPE JAVASCRIPT -->
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.scrolltofixed.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.scrollspeed.js"></script>
+  <script src="assets/js/main.js"></script>
+</html>

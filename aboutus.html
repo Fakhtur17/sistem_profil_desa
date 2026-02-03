@@ -1,0 +1,1902 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profil Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/profil_desa/" />
+    <!-- SCOPE MOBILE VERSION RESPONSIVE -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <!-- SCOPE ADD TO HOMESCREEN AND THEME COLOR -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="PT. Apecsa Optima Solusi"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- SCOPE COLOR FOR BROWSER CHROME, FIREFOX AND OPERA -->
+    <meta name="theme-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER WINDOWS PHONE -->
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER IOS, SAFARI BROWSER -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- SCOPE SHARE FACEBOOK -->
+    <meta property="og:url" content="http://urlnya.com/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:description" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:image" content="URL IMAGE WEBSITE" />
+
+    <!-- SCOPE SHARE TWITTER -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="apecsa" />
+    <meta name="twitter:title" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:description" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:creator" content="Fathan Rohman" />
+    <meta
+      name="twitter:image:src"
+      content="https://website.com/image250X250.png"
+    />
+    <meta name="twitter:domain" content="website.com" />
+
+    <!-- SCOPE SHARE GOOGLE PLUS -->
+    <meta itemprop="name" content="PT. Apecsa Optima Solusi" />
+    <meta
+      itemprop="description"
+      content="Apecsa Optima Solusi (ApecsaOS) Bergerak di jasa pembuatan aplikasi, e-gov, erp, custom software, mobile application"
+    />
+    <meta itemprop="image" content="https://website.com/image250X250.png" />
+
+    <!-- SCOPE STLYESHEET -->
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+    <style>
+      /* ================================
+   COUNTING DATA – 4 KOLOM
+   ================================ */
+
+      /* Desktop: 4 kolom */
+      .counting-data .list-data ul li {
+        width: 20%;
+        float: left;
+        box-sizing: border-box;
+      }
+
+      /* Kecilkan sedikit font biar rapi */
+      .counting-data .list-data ul li .title {
+        font-size: 18px;
+        line-height: 1.4;
+      }
+
+      .counting-data .list-data ul li .number {
+        font-size: 28px;
+        font-weight: bold;
+      }
+
+      /* Catatan kecil */
+      .counting-data .list-data ul li .small-note {
+        font-size: 13px;
+        color: rgba(255, 255, 255, 0.9);
+      }
+
+      /* Clear float */
+      .counting-data .list-data ul::after {
+        content: "";
+        display: block;
+        clear: both;
+      }
+
+      /* ================================
+   RESPONSIVE
+   ================================ */
+
+      /* Tablet: 2 kolom */
+      @media (max-width: 991px) {
+        .counting-data .list-data ul li {
+          width: 50%;
+        }
+      }
+
+      /* HP: 1 kolom */
+      @media (max-width: 575px) {
+        .counting-data .list-data ul li {
+          width: 100%;
+        }
+      }
+      /* ================================
+   MEET OUR TEAM - 3 KOLOM + BESAR + NAMA/JABATAN TAMPIL
+   ================================ */
+
+      /* jarak section biar lega */
+      .our-team {
+        padding: 60px 0;
+      }
+
+      /* jadikan 3 kolom per baris (bootstrap lama pakai float) */
+      .our-team .list-team > .col-md-3 {
+        width: 25% !important; /* dari 25% jadi 33% */
+        float: left !important;
+      }
+
+      /* responsive: tablet 2 kolom */
+      @media (max-width: 991px) {
+        .our-team .list-team > .col-md-3 {
+          width: 50% !important;
+        }
+      }
+
+      /* responsive: hp 1 kolom */
+      @media (max-width: 575px) {
+        .our-team .list-team > .col-md-3 {
+          width: 100% !important;
+        }
+      }
+
+      /* box dibesarkan + rapi */
+      .our-team .box-user {
+        margin-bottom: 24px;
+      }
+      /* Bikin section team full layar */
+      .our-team .container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 40px;
+        padding-right: 40px;
+      }
+
+      .our-team .box-user .image {
+        position: relative;
+        border-radius: 14px;
+        overflow: hidden;
+        box-shadow: 0 10px 26px rgba(0, 0, 0, 0.1);
+      }
+
+      /* gambar dibikin lebih tinggi (lebih gede) */
+      .our-team .box-user .image img {
+        width: 100%;
+        height: 600px; /* kamu bisa naikkan: 340/360 */
+        object-fit: cover;
+        display: block;
+        transition: transform 0.25s ease;
+      }
+
+      .our-team .box-user:hover .image img {
+        transform: scale(1.04);
+      }
+
+      /* overlay selalu tampil sebagai label di bawah (bukan full gelap) */
+      .our-team .box-user .overlay {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+        height: auto;
+        opacity: 1 !important; /* paksa tampil */
+        background: linear-gradient(
+          to top,
+          rgba(0, 0, 0, 0.75),
+          rgba(0, 0, 0, 0)
+        );
+        padding: 18px 16px 14px;
+      }
+
+      /* pastikan info terlihat */
+      .our-team .box-user .overlay .box-info {
+        position: relative;
+        text-align: left;
+      }
+
+      /* style nama & jabatan */
+      .our-team .box-user .overlay .box-info .name {
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        margin-bottom: 2px;
+      }
+
+      .our-team .box-user .overlay .box-info .position {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+      }
+
+      /* opsi: card "We are Hiring!" juga rapi */
+      .our-team .box-user .overlay .box-info .position:only-child {
+        font-weight: 700;
+        font-size: 16px;
+      }
+      /* NAVBAR TIDAK DIUBAH */
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+
+      /* BRAND TETAP NORMAL */
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+
+      /* LOGO SAJA YANG DIBESARKAN */
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px; /* dasar */
+        width: auto;
+        display: block;
+
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+
+      /* ========= FIX LOGO FOOTER (BIAR AMAN DAN GAK IKUT KEPAKSA) ========= */
+      footer.footer-wrapper .box-footer .image img {
+        width: 300px; /* atur sesuai kebutuhan */
+        height: auto;
+
+        transform: none !important;
+      }
+
+      /* ================================
+   STRUKTUR ORGANISASI DESA (FOTO)
+================================ */
+      .org-structure-section {
+        padding: 60px 0;
+      }
+
+      /* card modern */
+      .org-card {
+        margin-top: 22px;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.08);
+        padding: 18px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      /* thumbnail gambar */
+      .org-thumb {
+        display: block;
+        position: relative;
+        border-radius: 16px;
+        overflow: hidden;
+        border: 1px solid rgba(0, 0, 0, 0.06);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+      }
+
+      .org-thumb img {
+        width: 100%;
+        height: 430px;
+        object-fit: cover; /* biar foto rapi */
+        display: block;
+        transition: transform 0.28s ease;
+      }
+
+      /* hover efek */
+      .org-thumb:hover img {
+        transform: scale(1.03);
+      }
+
+      /* badge "Perbesar" */
+      .org-badge {
+        position: absolute;
+        right: 14px;
+        bottom: 14px;
+        background: rgba(0, 0, 0, 0.72);
+        color: #fff;
+        padding: 10px 14px;
+        border-radius: 999px;
+        font-size: 13px;
+        letter-spacing: 0.2px;
+      }
+
+      /* panel info kanan */
+      .org-info {
+        padding: 10px 6px;
+      }
+
+      .org-info-title {
+        font-size: 20px;
+        font-weight: 800;
+        color: #222;
+        margin-bottom: 10px;
+      }
+
+      .org-info-desc {
+        font-size: 14px;
+        line-height: 1.8;
+        color: #555;
+        margin-bottom: 16px;
+      }
+
+      .org-actions .btn {
+        width: 100%;
+      }
+
+      .org-note {
+        margin-top: 14px;
+        font-size: 13px;
+        color: #666;
+        background: #f7f7f7;
+        border: 1px dashed rgba(0, 0, 0, 0.15);
+        padding: 10px 12px;
+        border-radius: 12px;
+      }
+
+      /* modal style */
+      .org-modal .modal-header {
+        border-bottom: 0;
+      }
+
+      .org-modal .modal-title {
+        font-weight: 800;
+      }
+
+      .org-modal-wrap {
+        border-radius: 14px;
+        overflow: auto; /* biar bisa scroll kalau zoom */
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        background: #fff;
+        max-height: 70vh;
+        padding: 10px;
+      }
+
+      .org-modal-wrap img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transform-origin: top left;
+        transition: transform 0.15s ease;
+      }
+
+      .org-modal-tools {
+        margin-top: 12px;
+      }
+
+      /* responsive */
+      @media (max-width: 991px) {
+        .org-thumb img {
+          height: 320px;
+        }
+        .org-info {
+          margin-top: 14px;
+        }
+      }
+
+      @media (max-width: 575px) {
+        .org-card {
+          padding: 14px;
+        }
+        .org-thumb img {
+          height: 240px;
+        }
+        .org-badge {
+          right: 10px;
+          bottom: 10px;
+          padding: 8px 12px;
+        }
+      }
+    </style>
+    <script>
+      (function () {
+        var zoom = 1;
+        var step = 0.15;
+        var img = null;
+
+        function applyZoom() {
+          if (!img) return;
+          img.style.transform = "scale(" + zoom + ")";
+        }
+
+        $("#modalStrukturDesa").on("shown.bs.modal", function () {
+          img = document.getElementById("orgModalImg");
+          zoom = 1;
+          applyZoom();
+        });
+
+        $("#orgZoomIn").on("click", function () {
+          zoom = Math.min(3, zoom + step);
+          applyZoom();
+        });
+
+        $("#orgZoomOut").on("click", function () {
+          zoom = Math.max(0.6, zoom - step);
+          applyZoom();
+        });
+
+        $("#orgZoomReset").on("click", function () {
+          zoom = 1;
+          applyZoom();
+        });
+      })();
+    </script>
+
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- START SCOPE HEADER -->
+      <!-- <header class="header-wrapper">
+        <div class="container">
+          <div class="box-header">
+            <div class="introduce">
+              <span>
+                Selamat datang di PT. Apecsa Optima Solusi
+              </span>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <span>admin@apecsa-indonesia.com</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <span>(021) 234 454</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-map-marker"></i>
+                  </div>
+                  <span>Cilandak, Jakarta Selatan</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header> -->
+      <!-- END SCOPE HEADER -->
+
+      <!-- START SCOPE NAVBAR BOOTSTRAP -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/remove.png" alt="ApecsaOS" />
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li class="active">
+                    <a href="aboutus.html">Tentang Desa</a>
+                  </li>
+                  <li><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li><a href="career.html">Informasi</a></li>
+                  <li><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- END SCOPE NAVBAR BOOTSTRAP -->
+
+      <!-- START SCOPE SUB HEADER -->
+      <section class="sub-header parallax-apecsa bg-service">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="title">Tentang Desa</div>
+            <div class="description">
+              Desa Susukan adalah salah satu desa di
+              <strong>Kecamatan Susukan, Kabupaten Banjarnegara</strong>.
+              Halaman ini memuat gambaran umum desa, sejarah singkat, visi-misi,
+              serta potensi dan arah pembangunan desa.
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE SUB HEADER -->
+
+      <!-- START SCOPE INFORMATION DETAIL ABOUTUS -->
+      <section class="content-video bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="video-wrapper">
+                  <iframe
+                    width="100%"
+                    height="435"
+                    src="https://www.youtube.com/embed/9lczDoj1VKw"
+                    frameborder="0"
+                    allow="
+                      accelerometer;
+                      autoplay;
+                      clipboard-write;
+                      encrypted-media;
+                      gyroscope;
+                      picture-in-picture;
+                    "
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-wrapper">
+                  <div class="title">
+                    Mengenai kami, Desa Susukan Banjarnegara
+                  </div>
+                  <div class="desc">
+                    <div
+                      class="panel-group"
+                      id="accordion"
+                      role="tablist"
+                      aria-multiselectable="true"
+                    >
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingOne">
+                          <h4 class="panel-title">
+                            <a
+                              role="button"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#about-visi"
+                              aria-expanded="true"
+                              aria-controls="about-visi"
+                            >
+                              Visi Kami
+                            </a>
+                          </h4>
+                        </div>
+                        <div
+                          id="about-visi"
+                          class="panel-collapse collapse in"
+                          role="tabpanel"
+                          aria-labelledby="headingOne"
+                        >
+                          <div class="panel-body">
+                            “SUSUKAN BANGKIT MENUJU DESA YANG AGAMIS,
+                            BERMARTABAT, CERDAS & SEJAHTERA” (ABC - S).
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                          <h4 class="panel-title">
+                            <a
+                              class="collapsed"
+                              role="button"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#misi"
+                              aria-expanded="false"
+                              aria-controls="misi"
+                            >
+                              Misi Kami
+                            </a>
+                          </h4>
+                        </div>
+                        <div
+                          id="misi"
+                          class="panel-collapse collapse"
+                          role="tabpanel"
+                          aria-labelledby="headingTwo"
+                        >
+                          <div class="panel-body">
+                            <ol style="padding-left: 18px; margin: 0">
+                              <li>
+                                Mewujudkan masyarakat Desa Susukan yang
+                                berkualitas, kreatif, inovatif dengan
+                                memanfaatkan teknologi.
+                              </li>
+                              <li>
+                                Mewujudkan pemerintahan Desa Susukan yang handal
+                                untuk peningkatan pelayanan masyarakat.
+                              </li>
+                              <li>
+                                Mewujudkan kehidupan yang kondusif, dan agamis.
+                              </li>
+                              <li>
+                                Memperkuat ekonomi kerakyatan yang berbasis
+                                keunggulan lokal desa.
+                              </li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                          <h4 class="panel-title">
+                            <a
+                              class="collapsed"
+                              role="button"
+                              data-toggle="collapse"
+                              data-parent="#accordion"
+                              href="#target"
+                              aria-expanded="false"
+                              aria-controls="target"
+                            >
+                              Program Prioritas
+                            </a>
+                          </h4>
+                        </div>
+                        <div
+                          id="target"
+                          class="panel-collapse collapse"
+                          role="tabpanel"
+                          aria-labelledby="headingThree"
+                        >
+                          <div class="panel-body">
+                            <ol style="line-height: 1.9; padding-left: 20px">
+                              <li>
+                                Mekanisme sewa menyewa tanah kas desa dengan
+                                cara “lintingan”.
+                              </li>
+                              <li>
+                                Bantuan modal usaha untuk kelompok pemuda dengan
+                                sistem pinjam pakai tanah kas desa.
+                              </li>
+                              <li>
+                                Bantuan modal kerja masyarakat tidak mampu
+                                dengan pemanfaatan tanah kas desa sistem “maro”.
+                              </li>
+                              <li>
+                                Bantuan modal usaha industri rumah tangga / UMKM
+                                dengan sistem hibah.
+                              </li>
+                              <li>
+                                Dana stimulan kelompok pengajian perempuan.
+                              </li>
+                              <li>
+                                Pelatihan pemuda, perempuan, dan kelompok
+                                masyarakat lainnya.
+                              </li>
+                              <li>
+                                Pembangunan pusat perdagangan Tobong & Geblug
+                                (kios dan ruko).
+                              </li>
+                              <li>
+                                Pusat olahraga dan rekreasi keluarga di sekitar
+                                lapangan desa.
+                              </li>
+                              <li>
+                                Kantor desa & balai desa modern untuk pelayanan
+                                optimal.
+                              </li>
+                              <li>Percepatan pembangunan jalan dan irigasi.</li>
+                              <li>Revitalisasi Sungai Gumelem.</li>
+                              <li>Insentif layak untuk RT/RW.</li>
+                              <li>
+                                Bantuan sosial anak yatim, dhuafa, dan warga
+                                terlantar.
+                              </li>
+                              <li>Revitalisasi sektor pertanian.</li>
+                            </ol>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE INFORMATION DETAIL ABOUTUS -->
+
+      <!-- START SCOPE COUNTING DATA -->
+      <!-- START SCOPE COUNTING DATA (STATISTIK PENDUDUK) -->
+      <div class="counting-data" id="statistik-penduduk">
+        <div class="list-data">
+          <ul>
+            <li>
+              <div class="title">Total Penduduk (Jiwa)</div>
+              <div class="number">
+                <span
+                  class="incrementalNumber"
+                  set-time="3000"
+                  data-value="4129"
+                ></span>
+              </div>
+              <div class="small-note">Rekap jumlah penduduk Desa Susukan.</div>
+            </li>
+
+            <li>
+              <div class="title">Lansia (≥ 60 Tahun)</div>
+              <div class="number">
+                <span
+                  class="incrementalNumber"
+                  set-time="3000"
+                  data-value="410"
+                ></span>
+              </div>
+              <div class="small-note">
+                <span class="percent" data-key="lansia">—</span> dari total
+                penduduk
+              </div>
+            </li>
+
+            <li>
+              <div class="title">produktif(18–59 Tahun)</div>
+              <div class="number">
+                <span
+                  class="incrementalNumber"
+                  set-time="3000"
+                  data-value="2458"
+                ></span>
+              </div>
+              <div class="small-note">
+                <span class="percent" data-key="dewasa">—</span> dari total
+                penduduk
+              </div>
+            </li>
+
+            <li>
+              <div class="title">Balita (0–5 Tahun)</div>
+              <div class="number">
+                <span
+                  class="incrementalNumber"
+                  set-time="3000"
+                  data-value="193"
+                ></span>
+              </div>
+              <div class="small-note">
+                <span class="percent" data-key="balita">—</span> dari total
+                penduduk
+              </div>
+            </li>
+            <li>
+              <div class="title">Remaja (5-18 Tahun)</div>
+              <div class="number">
+                <span
+                  class="incrementalNumber"
+                  set-time="3000"
+                  data-value="922"
+                ></span>
+              </div>
+              <div class="small-note">
+                <span class="percent" data-key="balita">—</span> dari total
+                penduduk
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END SCOPE COUNTING DATA -->
+
+      <!-- END SCOPE COUNTING DATA -->
+
+      <!-- START SCOPE STRUKTUR ORGANISASI DESA (GAMBAR) -->
+      <section class="org-structure-section bg-white" id="struktur-desa">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Struktur Organisasi Desa</span>
+              </div>
+              <div class="desc color-black">
+                Berikut adalah foto bagan struktur organisasi Pemerintah Desa
+                Susukan sebagai gambaran pembagian tugas dan alur koordinasi
+                pelayanan masyarakat.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="org-card">
+              <div class="row">
+                <!-- KIRI: GAMBAR -->
+                <div class="col-md-8">
+                  <a
+                    href="#"
+                    class="org-thumb"
+                    data-toggle="modal"
+                    data-target="#modalStrukturDesa"
+                    title="Klik untuk memperbesar"
+                  >
+                    <!-- GANTI PATH GAMBAR DI SINI -->
+                    <img
+                      src="assets/images/client/struktur.jpeg"
+                      alt="Struktur Organisasi Pemerintah Desa Susukan"
+                    />
+                    <span class="org-badge">
+                      <i class="fa fa-search-plus"></i> Perbesar
+                    </span>
+                  </a>
+                </div>
+
+                <!-- KANAN: INFO + TOMBOL -->
+                <div class="col-md-4">
+                  <div class="org-info">
+                    <div class="org-info-title">Bagan Struktur (Foto)</div>
+                    <div class="org-info-desc">
+                      Klik gambar untuk melihat ukuran penuh. Jika teks pada
+                      foto terlihat kecil, gunakan fitur zoom pada tampilan
+                      modal.
+                    </div>
+
+                    <div class="org-actions">
+                      <a
+                        href="assets/images/client/struktur.jpeg"
+                        target="_blank"
+                        class="btn btn-primary btn-lg"
+                        rel="noopener noreferrer"
+                      >
+                        <i class="fa fa-external-link"></i> Buka Ukuran Penuh
+                      </a>
+
+                      <!-- opsional kalau punya pdf -->
+                      <!--
+                <a
+                  href="assets/files/struktur-organisasi-desa.pdf"
+                  class="btn btn-default btn-lg"
+                  download
+                  style="margin-top:10px;"
+                >
+                  <i class="fa fa-download"></i> Unduh PDF
+                </a>
+                -->
+                    </div>
+
+                    <div class="org-note">
+                      <i class="fa fa-info-circle"></i>
+                      Tips: pakai foto resolusi tinggi agar tulisan di bagan
+                      tetap jelas.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- MODAL ZOOM GAMBAR -->
+          <div
+            class="modal fade"
+            id="modalStrukturDesa"
+            tabindex="-1"
+            role="dialog"
+            aria-labelledby="modalStrukturDesaLabel"
+          >
+            <div class="modal-dialog modal-lg" role="document">
+              <div class="modal-content org-modal">
+                <div class="modal-header">
+                  <button
+                    type="button"
+                    class="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                  <h4 class="modal-title" id="modalStrukturDesaLabel">
+                    Struktur Organisasi Pemerintah Desa Susukan
+                  </h4>
+                </div>
+
+                <div class="modal-body">
+                  <div class="org-modal-wrap">
+                    <img
+                      id="orgModalImg"
+                      src="assets/images/client/struktur.jpeg"
+                      alt="Struktur Organisasi Desa Susukan"
+                    />
+                  </div>
+
+                  <div class="org-modal-tools text-center">
+                    <button class="btn btn-default" id="orgZoomOut">
+                      <i class="fa fa-search-minus"></i> Zoom Out
+                    </button>
+                    <button class="btn btn-default" id="orgZoomReset">
+                      <i class="fa fa-refresh"></i> Reset
+                    </button>
+                    <button class="btn btn-default" id="orgZoomIn">
+                      <i class="fa fa-search-plus"></i> Zoom In
+                    </button>
+                  </div>
+
+                  <div class="text-center" style="margin-top: 10px">
+                    <a
+                      class="btn btn-primary"
+                      href="assets/images/client/struktur.jpeg"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <i class="fa fa-external-link"></i> Buka Tab Baru
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE STRUKTUR ORGANISASI DESA (GAMBAR) -->
+
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Perangkat Desa</span>
+              </div>
+              <div class="desc color-black">
+                Perangkat Desa Susukan merupakan unsur penyelenggara
+                pemerintahan desa yang bertugas membantu Kepala Desa dalam
+                melaksanakan pelayanan publik, administrasi pemerintahan,
+                pembangunan desa, serta pemberdayaan masyarakat. Dengan struktur
+                yang tertata dan kinerja yang profesional, perangkat desa
+                berkomitmen memberikan pelayanan yang cepat, transparan, dan
+                akuntabel kepada seluruh warga.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/kades.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Mokhamad Sholeh</div>
+                          <div class="position">Kepala Desa</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/sekdes.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Asih Maria Pratiwi, S.Pd</div>
+                          <div class="position">Sekretaris</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/keuangan.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Teguh Semono</div>
+                          <div class="position">Kaur Keuangan</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/perencanaan.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Supriyanto</div>
+                          <div class="position">Kaur Perencanaan</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/juliadi.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Juliadi, S.Sos</div>
+                          <div class="position">Kaur TU dan Umum</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/roni.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Roni Hidayat Dwi Putra, S.E</div>
+                          <div class="position">Kasi Pemerintahan</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/lastoyo.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Lastoyo</div>
+                          <div class="position">Kasi Kesejahteraan</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/arif.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Arif Sutaryo</div>
+                          <div class="position">Kasi Pelayanan</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/ifan.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Ifvan Setiawan</div>
+                          <div class="position">Kepala Dusun I</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/marsum.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Marsum Martono, S.H</div>
+                          <div class="position">Kepala Dusun II</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/ismangil.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">KH. Ismangil</div>
+                          <div class="position">Kepala Dusun III</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/suwarto.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Suwarto Umar M Fachruddin</div>
+                          <div class="position">Staff</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">BPD</span>
+              </div>
+              <div class="desc color-black">
+                BPD Desa adalah lembaga perwakilan masyarakat desa yang
+                berfungsi sebagai mitra kerja Kepala Desa dalam penyelenggaraan
+                pemerintahan desa. BPD berperan dalam menampung dan menyalurkan
+                aspirasi masyarakat, membahas serta menyepakati peraturan desa,
+                serta melakukan pengawasan terhadap kinerja pemerintah desa guna
+                mewujudkan tata kelola desa yang transparan, demokratis, dan
+                akuntabel.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/sunanto.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Sunanto, S.Pd SD</div>
+                          <div class="position">Ketua</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/ikhwanudin.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Ikhwanudin, S.Pd SD</div>
+                          <div class="position">Wakil Ketua</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/yadi.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Imam Haryadi, A.Md.Kom</div>
+                          <div class="position">Sekretaris</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/imam.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Imam Sobirin</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/cha.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Chadingun</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/siba.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Siti Barokah, S.Pd Paud</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/yuli.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Yuliatun</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE OUR TEAM -->
+
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">BUMDES</span>
+              </div>
+              <div class="desc color-black">
+                BUMDes adalah badan usaha yang didirikan oleh pemerintah desa
+                bersama masyarakat untuk mengelola potensi ekonomi desa secara
+                produktif dan berkelanjutan. BUMDes bertujuan meningkatkan
+                pendapatan desa, membuka lapangan kerja, serta mendorong
+                kemandirian ekonomi masyarakat melalui berbagai unit usaha
+                sesuai dengan kebutuhan dan potensi lokal desa.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/arief.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Ariefika Dimas Harmanto, S.Pd</div>
+                          <div class="position">Direktur</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/eli_mariana_terbaru.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Eli Mariana</div>
+                          <div class="position">Sekretaris</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/hasanah.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Uswatun Hasanah</div>
+                          <div class="position">Bendahara</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/mulyanto.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Mulyanto</div>
+                          <div class="position">Manager Unit Damiu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/tri.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Tri Wahyu Romadhon, S.Pd., Gr</div>
+                          <div class="position">Manager Unit SSB</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/suwaryo.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Suwaryo</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/bagas.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Bagas Saputra</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/feri.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Feri Andre Wahyudi</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/zildan.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Zildan Wildan Fahlevi</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/noval.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Naufal Mufid Ibrahim</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/dimas.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Dimas Aji Prasetyo</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/fahmi.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Fahmi Idris H</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE OUR TEAM -->
+
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Ibu PKK dan Posyandu</span>
+              </div>
+              <div class="desc color-black">
+                PKK (Pemberdayaan dan Kesejahteraan Keluarga) bersama Posyandu
+                merupakan pilar penting dalam meningkatkan kesejahteraan
+                masyarakat Desa Susukan, khususnya di bidang kesehatan ibu dan
+                anak, gizi balita, serta pemberdayaan keluarga. Melalui kegiatan
+                rutin seperti penimbangan balita, penyuluhan kesehatan,
+                imunisasi, serta pelatihan keterampilan, PKK dan Posyandu
+                berperan aktif dalam menciptakan keluarga yang sehat, mandiri,
+                dan sejahtera.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/ibu_kades.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Sri Suryani, S.Pd</div>
+                          <div class="position">Ibu Kades</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/susilowati.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Susilowati</div>
+                          <div class="position">Ibu PKK</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/turmiyati.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Turmiyati</div>
+                          <div class="position">Ibu PKK</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/sulistiani.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Sulistiani</div>
+                          <div class="position">Ibu PKK</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/Tumiyati.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Tumiyati</div>
+                          <div class="position">Ibu PKK</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/orin.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Mei Rina Dwi Gustin, S.ST</div>
+                          <div class="position">Kader Posyandu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/lastri.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Lastri</div>
+                          <div class="position">Kader Posyandu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/siti.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Siti Nurkhayati</div>
+                          <div class="position">Kader Posyandu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/dian.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Dian Setia Rokhani</div>
+                          <div class="position">Kader Posyandu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/merinda.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Merinda Nopita Sari</div>
+                          <div class="position">Kader Posyandu</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE OUR TEAM -->
+
+      <!-- START SCOPE OUR TEAM -->
+      <section class="our-team bg-white">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-white">Perternakan</span>
+              </div>
+              <div class="desc color-black">
+                Peternakan kambing di Desa Susukan merupakan salah satu potensi
+                usaha desa yang dikelola oleh masyarakat dan didukung oleh
+                BUMDes untuk meningkatkan perekonomian lokal. Usaha ini berfokus
+                pada pengembangan ternak yang sehat dan produktif melalui
+                perawatan rutin, pakan berkualitas, serta pengelolaan kandang
+                yang higienis. Hasil peternakan dimanfaatkan untuk kebutuhan
+                konsumsi, penjualan, serta pengembangan usaha berkelanjutan bagi
+                warga desa.
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="row">
+              <div class="list-team">
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/hardi.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Hardiyanto</div>
+                          <div class="position">
+                            Manager unit Ternak Kambing
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/suparmo.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Suparmo Chaeruri</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/sugeng.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Sugeng Priyono</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/sumarno.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Sumarno</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/ikoen.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Ikoen Saputro</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/siyam.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Siyam</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img
+                        src="assets/images/client/Nurgianto.jpeg"
+                        alt="Fathan"
+                      />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Nurgianto</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="box-user">
+                    <div class="image">
+                      <img src="assets/images/client/paino.jpeg" alt="Fathan" />
+                      <div class="overlay">
+                        <div class="box-info">
+                          <div class="name">Paino</div>
+                          <div class="position">Anggota</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE OUR TEAM -->
+
+      <!-- START SCOPE CLIENT & PARTNER  -->
+      <!--  
+        1. BPKP
+        2. PT. Buana Pacific Intenational
+        3. Casante International Hotel Management
+        4. Niscom Data Solution
+        5. Super Soft
+        6. Alita
+        7. Soiitz
+        8. Elitry
+        9. Miracle Details
+        10. Skillagogo PTE LTD
+        11. pemerintah kabupaten tangerang
+        12. inotech
+        13. BPDP
+      -->
+      <!-- END SCOPE CLIENT  -->
+
+      <!-- START SCOPE INTRODUCE CONTACT US -->
+      <section class="parallax-apecsa bg-img-2 introduce-wrapper contact-us">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-white">
+                <span>Kontak Pemerintah Desa</span>
+              </div>
+              <div class="desc color-white">
+                Kami siap melayani masyarakat Desa Susukan dengan pelayanan yang
+                cepat, ramah, transparan, dan bertanggung jawab. Silakan hubungi
+                kami untuk informasi lebih lanjut atau pengajuan layanan desa
+                secara online.
+              </div>
+              <a href="contactus.html" class="btn btn-apecsa-orange btn-lg">
+                <i class="fa fa-envelope"></i>
+                Hubungi Kami
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE INTRODUCE CONTACT US -->
+
+      <!-- START SCOPE FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img src="assets/images/logo/background.png" alt="" />
+              </div>
+              <div class="social-media">
+                <a href="#" class="btn btn-default btn-social-media facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media instagram">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END SCOPE FOOTER -->
+      <a
+        href=""
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Back to top"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </body>
+
+  <!-- SCOPE JAVASCRIPT -->
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.scrolltofixed.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.scrollspeed.js"></script>
+  <script src="assets/js/incremental.number.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      incrementalNumber();
+    });
+  </script>
+  <script src="assets/js/main.js"></script>
+</html>

@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <title>Detail Informasi - Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/profil_desa/" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <meta name="theme-color" content="#F17127" />
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Profil Desa Susukan" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+
+    <style>
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px;
+        width: auto;
+        display: block;
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+      footer.footer-wrapper .box-footer .image img {
+        width: 300px;
+        height: auto;
+        transform: none !important;
+      }
+
+      .detail-wrapper {
+        padding: 80px 0;
+      }
+      .detail-card {
+        background: #fff;
+        border-radius: 6px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+        padding: 25px;
+      }
+      .detail-title {
+        font-size: 26px;
+        font-weight: 700;
+        margin: 0 0 10px;
+      }
+      .detail-meta {
+        color: #777;
+        margin-bottom: 18px;
+        font-size: 13px;
+      }
+      .detail-meta i {
+        margin-right: 6px;
+      }
+      .detail-hero {
+        width: 100%;
+        border-radius: 6px;
+        margin: 10px 0 20px;
+      }
+
+      .sidebar {
+        background: #fff;
+        padding: 20px;
+        border-radius: 6px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+      }
+      .title-sidebar {
+        font-size: 18px;
+        font-weight: 700;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #f17127;
+        padding-bottom: 6px;
+        color: #333;
+      }
+      .sidebar .panel-heading {
+        background: #f7f7f7 !important;
+      }
+
+      .gallery-wrap {
+        margin-top: 20px;
+      }
+      .gallery-item {
+        margin-bottom: 15px;
+      }
+      .gallery-item img {
+        width: 100%;
+        border-radius: 6px;
+        border: 1px solid #eee;
+      }
+
+      .btn-apecsa-red {
+        background: #f17127;
+        border-color: #f17127;
+        color: #fff;
+      }
+      .btn-apecsa-red:hover {
+        background: #df611c;
+        border-color: #df611c;
+        color: #fff;
+      }
+    </style>
+
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+  </head>
+
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- NAVBAR -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/remove.png" alt="Desa Susukan" />
+                </a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li><a href="aboutus.html">Tentang Desa</a></li>
+                  <li><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li class="active"><a href="career.html">Informasi</a></li>
+                  <li><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- SUB HEADER -->
+      <section class="sub-header parallax-apecsa bg-portfolio">
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="title">Detail Informasi</div>
+            <div class="description" id="subDesc">
+              Dokumentasi dan penjelasan lengkap kegiatan unggulan Desa Susukan.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- KONTEN DETAIL -->
+      <section class="detail-wrapper bg-gray">
+        <div class="container">
+          <!-- KONTEN UTAMA -->
+          <div class="col-md-8">
+            <div class="detail-card">
+              <h1 class="detail-title" id="title"></h1>
+
+              <div class="detail-meta" id="meta"></div>
+
+              <img class="detail-hero" id="heroImg" src="" alt="" />
+
+              <div id="content"></div>
+
+              <div
+                class="panel panel-default"
+                style="margin-top: 20px"
+                id="goalPanel"
+              >
+                <div class="panel-heading">
+                  <h4 class="panel-title">
+                    <i class="fa fa-star"></i> Tujuan / Manfaat
+                  </h4>
+                </div>
+                <div class="panel-body">
+                  <ul style="margin: 0; padding-left: 18px" id="goals"></ul>
+                </div>
+              </div>
+
+              <div class="gallery-wrap" id="galleryWrap">
+                <h4 style="font-weight: 700; margin: 0 0 10px">
+                  <i class="fa fa-camera"></i> Galeri Kegiatan
+                </h4>
+                <div class="row" id="gallery"></div>
+              </div>
+
+              <div style="margin-top: 20px">
+                <a href="career.html" class="btn btn-apecsa-red">
+                  <i class="fa fa-arrow-left"></i> Kembali ke Informasi
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <div class="col-md-4">
+            <aside class="sidebar">
+              <div class="title-sidebar">Info</div>
+              <div class="panel-group" id="sidePanels"></div>
+
+              <hr />
+              <div class="title-sidebar">Catatan</div>
+              <p style="margin: 0; color: #666" id="note"></p>
+            </aside>
+          </div>
+
+          <div class="clearfix"></div>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img src="assets/images/logo/background.png" alt="" />
+              </div>
+
+              <div class="social-media">
+                <a
+                  href="http://facebook.com"
+                  class="btn btn-default btn-social-media facebook"
+                >
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a
+                  href="http://twitter.com"
+                  class="btn btn-default btn-social-media twitter"
+                >
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a
+                  href="http://linkedin.com"
+                  class="btn btn-default btn-social-media linkedin"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a
+                  href="http://instagram.com"
+                  class="btn btn-default btn-social-media instagram"
+                >
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a
+        href=""
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Back to top"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.scrolltofixed.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.scrollspeed.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Tahun otomatis
+      document.getElementById("year").innerText = new Date().getFullYear();
+
+      // Ambil parameter ?item=
+      function getQueryParam(name) {
+        const params = new URLSearchParams(window.location.search);
+        return params.get(name);
+      }
+
+      // DATA DETAIL (tinggal edit kalau mau)
+      const DATA = {
+        sepakbola: {
+          title: "Sepak Bola “Susukan Youth United”",
+          subDesc:
+            "Pembinaan olahraga pemuda dan kebersamaan warga Desa Susukan.",
+          meta: [
+            { icon: "fa-calendar", text: "Kegiatan rutin mingguan" },
+            { icon: "fa-map-marker", text: "Lapangan Desa Susukan" },
+            { icon: "fa-users", text: "Pemuda & warga" },
+          ],
+          hero: "assets/images/career/bola_1.jpeg",
+          paragraphs: [
+            "Kegiatan sepak bola “Susukan Youth United” merupakan program olahraga desa yang melibatkan pemuda dan masyarakat untuk meningkatkan kebugaran, sportivitas, serta mempererat kebersamaan antarwarga.",
+            "Selain latihan rutin, tim juga mengikuti pertandingan persahabatan antar desa sebagai ajang meningkatkan pengalaman dan semangat berprestasi. Pemerintah desa mendukung kegiatan ini sebagai bagian dari pembinaan pemuda yang positif.",
+          ],
+          goals: [
+            "Meningkatkan kesehatan dan kebugaran warga.",
+            "Menumbuhkan sportivitas dan disiplin pemuda.",
+            "Membangun solidaritas dan kebersamaan masyarakat.",
+            "Membina potensi atlet muda desa.",
+          ],
+          sidebar: [
+            {
+              title: "Keterangan",
+              icon: "fa-info-circle",
+              body: "Dokumentasi kegiatan olahraga pemuda Desa Susukan.",
+            },
+            {
+              title: "Jadwal",
+              icon: "fa-calendar",
+              body: "Selasa,Kamis,Sabtu",
+            },
+            {
+              title: "Lokasi",
+              icon: "fa-map-marker",
+              body: "Lapangan Desa Susukan.",
+            },
+            {
+              title: "Kontak",
+              icon: "fa-phone",
+              body: "Arief",
+            },
+          ],
+          note: "Jika diperlukan, kegiatan ini dapat dilengkapi dengan data peserta, notulen rapat, atau informasi turnamen.",
+          gallery: [
+            "assets/images/portfolio/bola_2.jpeg",
+            "assets/images/portfolio/bola_3.jpeg",
+            "assets/images/portfolio/bola_4.jpeg",
+          ],
+        },
+
+        aguna: {
+          title: "Aguna Jaya Farm – Peternakan Kambing Daging Terpadu",
+          subDesc:
+            "Peternakan kambing daging dengan pemanfaatan urine dan kotoran untuk pertanian.",
+          meta: [
+            { icon: "fa-leaf", text: "Usaha terpadu ramah lingkungan" },
+            { icon: "fa-map-marker", text: "Desa Susukan" },
+            { icon: "fa-industry", text: "Dukungan ekonomi desa" },
+          ],
+          hero: "assets/images/career/aguna.jpeg",
+          paragraphs: [
+            "Aguna Jaya Farm merupakan usaha peternakan kambing daging yang dikelola masyarakat Desa Susukan sebagai salah satu program unggulan penguatan ekonomi desa.",
+            "Tidak hanya fokus pada produksi ternak, usaha ini juga mengembangkan konsep terpadu dengan memanfaatkan urine dan kotoran kambing sebagai bahan pupuk organik.",
+            "Pemanfaatan limbah ternak diarahkan untuk mendukung usaha pertanian warga sehingga tercipta siklus usaha yang ramah lingkungan, hemat biaya, dan bernilai tambah.",
+          ],
+          goals: [
+            "Meningkatkan produktivitas peternakan kambing daging.",
+            "Mengurangi limbah ternak melalui pemanfaatan pupuk organik.",
+            "Mendukung pertanian warga melalui pupuk dari urine/kotoran.",
+            "Meningkatkan pendapatan masyarakat dan kemandirian usaha desa.",
+          ],
+          sidebar: [
+            {
+              title: "Keterangan",
+              icon: "fa-info-circle",
+              body: "Peternakan kambing daging terpadu untuk mendukung ekonomi warga.",
+            },
+            {
+              title: "Pemanfaatan",
+              icon: "fa-recycle",
+              body: "Urine & kotoran diolah menjadi pupuk organik untuk pertanian.",
+            },
+            {
+              title: "Manfaat",
+              icon: "fa-leaf",
+              body: "Ramah lingkungan, hemat biaya, dan bernilai tambah.",
+            },
+          ],
+          note: "Ke depan dapat dikembangkan pelatihan pengolahan pupuk organik dan pemasaran produk ternak.",
+          gallery: [
+            "assets/images/portfolio/aguna2.jpeg",
+            "assets/images/portfolio/aguna3.jpeg",
+            "assets/images/portfolio/aguna4.jpeg",
+          ],
+        },
+
+        pertanian: {
+          title: "Pertanian Desa – Gapoktan & KWT Garda Ketahanan Pangan",
+          subDesc:
+            "Optimalisasi sawah dan pemanfaatan lahan melalui Gapoktan dan KWT.",
+          meta: [
+            { icon: "fa-leaf", text: "Ketahanan pangan" },
+            { icon: "fa-users", text: "Gapoktan & KWT" },
+            { icon: "fa-map-marker", text: "Sawah & lahan warga" },
+          ],
+          hero: "assets/images/career/tani.jpeg",
+          paragraphs: [
+            "Sektor pertanian Desa Susukan menjadi salah satu penopang utama ketahanan pangan desa. Kegiatan pertanian dilakukan secara gotong royong melalui peran Gapoktan dan Kelompok Wanita Tani (KWT).",
+            "Gapoktan dan KWT menjadi garda terdepan dalam pemanfaatan sawah serta penguatan produksi pangan keluarga, mulai dari pengolahan lahan, perawatan, hingga panen.",
+            "Melalui kolaborasi kelompok, diharapkan hasil pertanian lebih stabil, produktivitas meningkat, dan kesejahteraan keluarga tani semakin kuat.",
+          ],
+          goals: [
+            "Memaksimalkan pemanfaatan lahan sawah dan lahan produktif.",
+            "Mendukung ketersediaan pangan rumah tangga warga.",
+            "Meningkatkan kerjasama dan kapasitas kelompok tani.",
+            "Mendorong pertanian yang berkelanjutan dan mandiri.",
+          ],
+          sidebar: [
+            {
+              title: "Keterangan",
+              icon: "fa-info-circle",
+              body: "Gapoktan & KWT menggerakkan pertanian desa untuk ketahanan pangan.",
+            },
+            {
+              title: "Fokus",
+              icon: "fa-flag",
+              body: "Pemanfaatan sawah, pendampingan kelompok tani, penguatan produksi pangan.",
+            },
+          ],
+          note: "Dapat dikembangkan demplot, pelatihan budidaya, dan penguatan akses pasar hasil panen.",
+          gallery: [
+            "assets/images/portfolio/tani.jpeg",
+            "assets/images/portfolio/tani1.jpeg",
+            "assets/images/portfolio/tani2.jpeg",
+          ],
+        },
+
+        umkm: {
+          title: "UMKM Desa – Kreatif, Home Made, dan Terus Berkembang",
+          subDesc:
+            "Produk rumahan warga Susukan: kuliner, kerajinan, dan olahan lokal.",
+          meta: [
+            { icon: "fa-cutlery", text: "Kuliner & olahan" },
+            { icon: "fa-paint-brush", text: "Kerajinan kreatif" },
+            { icon: "fa-users", text: "Home made warga" },
+          ],
+          hero: "assets/images/career/umkm.jpeg",
+          paragraphs: [
+            "Warga Desa Susukan memiliki semangat wirausaha yang tinggi. Banyak UMKM bergerak di bidang produk rumahan (home made) seperti kuliner, jajanan, olahan hasil pertanian, kerajinan, hingga kebutuhan harian.",
+            "Meskipun sebagian produk masih belum dikenal luas, UMKM Desa Susukan terus berkembang melalui peningkatan kualitas, kemasan, serta pemasaran.",
+            "Dengan dukungan desa dan kolaborasi warga, UMKM diharapkan mampu naik kelas dan menjadi penggerak ekonomi keluarga.",
+          ],
+          goals: [
+            "Meningkatkan kualitas produk dan standar produksi.",
+            "Mendorong kemasan yang lebih menarik dan higienis.",
+            "Memperluas pemasaran (offline & online).",
+            "Meningkatkan pendapatan dan kemandirian ekonomi keluarga.",
+          ],
+          sidebar: [
+            {
+              title: "Keterangan",
+              icon: "fa-info-circle",
+              body: "UMKM warga didominasi produk home made: kuliner, kerajinan, olahan lokal.",
+            },
+            {
+              title: "Pengembangan",
+              icon: "fa-bullhorn",
+              body: "Fokus pada branding, kemasan, dan promosi agar makin dikenal.",
+            },
+          ],
+          note: "Ke depan dapat dibuat katalog UMKM desa dan promosi melalui media sosial/website desa.",
+          gallery: [
+            "assets/images/portfolio/umkm1.jpeg",
+            "assets/images/portfolio/umkm2.jpeg",
+            "assets/images/portfolio/umkm3.jpeg",
+          ],
+        },
+
+        depot: {
+          title: "Depot Air Isi Ulang – Unit Usaha BUMDes Susukan",
+          subDesc:
+            "Layanan air isi galon untuk warga, dikelola oleh BUMDes Susukan.",
+          meta: [
+            { icon: "fa-tint", text: "Air isi ulang galon" },
+            { icon: "fa-building", text: "Unit usaha BUMDes" },
+            { icon: "fa-map-marker", text: "Desa Susukan" },
+          ],
+          hero: "assets/images/career/air.jpeg",
+          paragraphs: [
+            "Depot Air Isi Ulang merupakan unit usaha BUMDes Susukan yang menyediakan layanan air minum isi galon bagi warga. Kehadiran depot ini memudahkan masyarakat memperoleh air minum dengan harga terjangkau.",
+            "Usaha depot air menjadi salah satu sumber pendapatan desa yang dikelola secara transparan dan berkelanjutan untuk mendukung program pembangunan dan pelayanan masyarakat.",
+          ],
+          goals: [
+            "Memudahkan akses air minum isi ulang bagi warga.",
+            "Menjaga kualitas layanan dan harga yang terjangkau.",
+            "Meningkatkan PADes melalui unit usaha BUMDes.",
+            "Mendukung pelayanan masyarakat secara berkelanjutan.",
+          ],
+          sidebar: [
+            {
+              title: "Keterangan",
+              icon: "fa-info-circle",
+              body: "Depot air isi ulang galon milik BUMDes Susukan.",
+            },
+            {
+              title: "Layanan",
+              icon: "fa-tint",
+              body: "Isi ulang galon untuk kebutuhan rumah tangga warga.",
+            },
+            {
+              title: "Manfaat",
+              icon: "fa-line-chart",
+              body: "Menambah pendapatan desa dan memperkuat layanan BUMDes.",
+            },
+          ],
+          note: "Dapat ditambahkan jam operasional, harga layanan, dan kontak pengelola depot.",
+          gallery: [
+            "assets/images/portfolio/air1.jpeg",
+            "assets/images/portfolio/air2.jpeg",
+            "assets/images/portfolio/air3.jpeg",
+          ],
+        },
+
+        tpq: {
+          title: "TPQ Desa – Mendidik Generasi Qurani Sejak Dini",
+          subDesc:
+            "Tempat belajar Al-Qur’an, akhlak, dan ibadah bagi anak-anak Desa Susukan.",
+          meta: [
+            { icon: "fa-book", text: "Belajar Iqro & Al-Qur’an" },
+            { icon: "fa-heart", text: "Pembinaan akhlak" },
+            { icon: "fa-child", text: "Anak-anak desa" },
+          ],
+          hero: "assets/images/career/tpq.jpeg",
+          paragraphs: [
+            "Taman Pendidikan Al-Qur’an (TPQ) Desa Susukan merupakan lembaga pendidikan nonformal yang membina anak-anak agar mampu membaca dan memahami Al-Qur’an sejak usia dini.",
+            "Kegiatan TPQ dilaksanakan secara rutin dengan bimbingan ustadz dan ustadzah yang sabar dan berdedikasi, menciptakan suasana belajar yang nyaman dan menyenangkan.",
+            "Selain belajar membaca Al-Qur’an, anak-anak juga diajarkan doa harian, tata cara ibadah, serta nilai-nilai akhlak mulia.",
+          ],
+          goals: [
+            "Meningkatkan kemampuan membaca Al-Qur’an sejak dini.",
+            "Menanamkan akhlak baik dan kedisiplinan ibadah.",
+            "Membentuk generasi yang religius dan berkarakter.",
+            "Memperkuat pendidikan keagamaan di desa.",
+          ],
+          sidebar: [
+            {
+              title: "Jadwal Kegiatan",
+              icon: "fa-clock-o",
+              body: "Setiap hari selain Jumat, mulai pukul 14.00 WIB sampai selesai.",
+            },
+            {
+              title: "Lokasi",
+              icon: "fa-map-marker",
+              body: "Dilaksanakan di mushola atau masjid Desa Susukan.",
+            },
+          ],
+          note: "TPQ menjadi pondasi penting dalam membentuk karakter religius generasi muda Desa Susukan.",
+          gallery: [
+            "assets/images/portfolio/tpq1.jpeg",
+            "assets/images/portfolio/tpq2.jpeg",
+            "assets/images/portfolio/tpq3.jpeg",
+          ],
+        },
+      };
+
+      // Render
+      const key = (getQueryParam("item") || "sepakbola").toLowerCase();
+      const d = DATA[key] || DATA.sepakbola;
+
+      // title
+      document.getElementById("title").innerText = d.title;
+      document.getElementById("subDesc").innerText = d.subDesc;
+
+      // meta
+      const metaEl = document.getElementById("meta");
+      metaEl.innerHTML = d.meta
+        .map((m) => {
+          return `
+            <span style="margin-right: 15px">
+              <i class="fa ${m.icon}"></i> ${m.text}
+            </span>
+          `;
+        })
+        .join("");
+
+      // hero
+      const heroImg = document.getElementById("heroImg");
+      heroImg.src = d.hero;
+      heroImg.alt = d.title;
+
+      // paragraphs
+      const contentEl = document.getElementById("content");
+      contentEl.innerHTML = d.paragraphs.map((p) => `<p>${p}</p>`).join("");
+
+      // goals
+      const goalsEl = document.getElementById("goals");
+      goalsEl.innerHTML = d.goals.map((g) => `<li>${g}</li>`).join("");
+
+      // sidebar panels
+      const sidePanels = document.getElementById("sidePanels");
+      sidePanels.innerHTML = d.sidebar
+        .map((s) => {
+          return `
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h4 class="panel-title">
+                  <i class="fa ${s.icon}"></i> ${s.title}
+                </h4>
+              </div>
+              <div class="panel-body">${s.body}</div>
+            </div>
+          `;
+        })
+        .join("");
+
+      // note
+      document.getElementById("note").innerText = d.note || "-";
+
+      // gallery
+      const galleryWrap = document.getElementById("galleryWrap");
+      const galleryEl = document.getElementById("gallery");
+      if (d.gallery && d.gallery.length) {
+        galleryEl.innerHTML = d.gallery
+          .slice(0, 6)
+          .map((src) => {
+            return `
+              <div class="col-sm-4 gallery-item">
+                <img src="${src}" alt="Galeri" />
+              </div>
+            `;
+          })
+          .join("");
+      } else {
+        galleryWrap.style.display = "none";
+      }
+    </script>
+  </body>
+</html>

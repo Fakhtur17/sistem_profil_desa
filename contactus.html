@@ -1,0 +1,932 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Profile Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <base href="/profil_desa/" />
+    <!-- SCOPE MOBILE VERSION RESPONSIVE -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=0"
+    />
+
+    <!-- SCOPE ADD TO HOMESCREEN AND THEME COLOR -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-title"
+      content="PT. Apecsa Optima Solusi"
+    />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+    <!-- SCOPE COLOR FOR BROWSER CHROME, FIREFOX AND OPERA -->
+    <meta name="theme-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER WINDOWS PHONE -->
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+
+    <!-- SCOPE BROWSER IOS, SAFARI BROWSER -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- SCOPE SHARE FACEBOOK -->
+    <meta property="og:url" content="http://urlnya.com/" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:description" content="PT. Apecsa Optima Solusi" />
+    <meta property="og:image" content="URL IMAGE WEBSITE" />
+
+    <!-- SCOPE SHARE TWITTER -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="apecsa" />
+    <meta name="twitter:title" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:description" content="PT. Apecsa Optima Solusi" />
+    <meta name="twitter:creator" content="Fathan Rohman" />
+    <meta
+      name="twitter:image:src"
+      content="https://website.com/image250X250.png"
+    />
+    <meta name="twitter:domain" content="website.com" />
+
+    <!-- SCOPE SHARE GOOGLE PLUS -->
+    <meta itemprop="name" content="PT. Apecsa Optima Solusi" />
+    <meta
+      itemprop="description"
+      content="Apecsa Optima Solusi (ApecsaOS) Bergerak di jasa pembuatan aplikasi, e-gov, erp, custom software, mobile application"
+    />
+    <meta itemprop="image" content="https://website.com/image250X250.png" />
+
+    <!-- SCOPE STLYESHEET -->
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+    <style>
+      /* NAVBAR TIDAK DIUBAH */
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+
+      /* BRAND TETAP NORMAL */
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+
+      /* LOGO SAJA YANG DIBESARKAN */
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px; /* dasar */
+        width: auto;
+        display: block;
+
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+
+      /* ========= FIX LOGO FOOTER (BIAR AMAN DAN GAK IKUT KEPAKSA) ========= */
+      footer.footer-wrapper .box-footer .image img {
+        width: 300px; /* atur sesuai kebutuhan */
+        height: auto;
+
+        transform: none !important;
+      }
+      /* ===== FORM KELUHAN WARGA DESA ===== */
+      .keluhan-section {
+        position: relative;
+        padding: 70px 0;
+        background: linear-gradient(180deg, #fff 0%, #f6f7fb 60%, #fff 100%);
+      }
+
+      .keluhan-section:before {
+        content: "";
+        position: absolute;
+        left: -120px;
+        top: 40px;
+        width: 280px;
+        height: 280px;
+        background: rgba(241, 113, 39, 0.12);
+        border-radius: 50%;
+        filter: blur(2px);
+      }
+      .keluhan-section:after {
+        content: "";
+        position: absolute;
+        right: -130px;
+        bottom: 40px;
+        width: 320px;
+        height: 320px;
+        background: rgba(0, 0, 0, 0.06);
+        border-radius: 50%;
+        filter: blur(2px);
+      }
+
+      .keluhan-wrap {
+        position: relative;
+        z-index: 2;
+      }
+
+      .keluhan-hero {
+        text-align: center;
+        margin-bottom: 25px;
+      }
+      .keluhan-badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(241, 113, 39, 0.1);
+        color: #c9591e;
+        font-weight: 700;
+        font-size: 12px;
+        letter-spacing: 0.4px;
+      }
+      .keluhan-title {
+        margin: 14px 0 8px;
+        font-size: 30px;
+        font-weight: 800;
+        color: #222;
+        line-height: 1.2;
+      }
+      .keluhan-subtitle {
+        max-width: 720px;
+        margin: 0 auto;
+        color: #555;
+        font-size: 15px;
+        line-height: 1.7;
+      }
+
+      .keluhan-card {
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.1);
+        background: rgba(255, 255, 255, 0.88);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(0, 0, 0, 0.06);
+      }
+
+      .keluhan-card-head {
+        padding: 18px 22px;
+        background: linear-gradient(
+          135deg,
+          #f17127 0%,
+          #ff8f4a 60%,
+          #f17127 100%
+        );
+        color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .keluhan-card-head .left {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+      .keluhan-icon-bubble {
+        width: 44px;
+        height: 44px;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.22);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+      }
+      .keluhan-card-head h3 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: 800;
+      }
+      .keluhan-card-head p {
+        margin: 2px 0 0;
+        opacity: 0.95;
+        font-size: 12px;
+      }
+      .keluhan-chip {
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 255, 255, 0.18);
+        font-size: 12px;
+        font-weight: 700;
+        white-space: nowrap;
+      }
+
+      .keluhan-card-body {
+        padding: 22px;
+      }
+
+      .keluhan-grid .row {
+        margin-left: -10px;
+        margin-right: -10px;
+      }
+      .keluhan-grid [class*="col-"] {
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .keluhan-field {
+        margin-bottom: 14px;
+      }
+      .keluhan-field label {
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 7px;
+      }
+
+      .keluhan-input {
+        position: relative;
+      }
+      .keluhan-input .form-control {
+        border-radius: 12px;
+        height: 46px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        box-shadow: none;
+        padding-left: 44px;
+        transition: 0.2s ease;
+        background: #fff;
+      }
+      .keluhan-input textarea.form-control {
+        height: auto;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-height: 140px;
+        resize: vertical;
+      }
+      .keluhan-input .form-control:focus {
+        border-color: #f17127;
+        box-shadow: 0 0 0 3px rgba(241, 113, 39, 0.16);
+      }
+
+      .keluhan-input i.fa {
+        position: absolute;
+        top: 50%;
+        left: 14px;
+        transform: translateY(-50%);
+        color: rgba(0, 0, 0, 0.45);
+        font-size: 16px;
+      }
+      .keluhan-input textarea + i.fa {
+        top: 18px;
+        transform: none;
+      }
+
+      .keluhan-help {
+        margin-top: 6px;
+        color: #777;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      .keluhan-actions {
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-top: 8px;
+      }
+
+      .btn-keluhan-primary {
+        background: #f17127;
+        border: none;
+        color: #fff;
+        border-radius: 999px;
+        padding: 12px 18px;
+        font-weight: 800;
+        letter-spacing: 0.2px;
+        transition: 0.25s ease;
+      }
+      .btn-keluhan-primary:hover,
+      .btn-keluhan-primary:focus {
+        background: #d95f1f;
+        color: #fff;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 24px rgba(241, 113, 39, 0.32);
+      }
+
+      .btn-keluhan-ghost {
+        background: transparent;
+        border: 1px solid rgba(0, 0, 0, 0.18);
+        color: #333;
+        border-radius: 999px;
+        padding: 12px 16px;
+        font-weight: 800;
+        transition: 0.25s ease;
+      }
+      .btn-keluhan-ghost:hover {
+        border-color: rgba(0, 0, 0, 0.26);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.1);
+      }
+
+      .keluhan-note {
+        margin-top: 14px;
+        padding: 12px 14px;
+        border-radius: 14px;
+        background: rgba(241, 113, 39, 0.08);
+        border: 1px dashed rgba(241, 113, 39, 0.4);
+        color: #6a3b1f;
+        font-size: 12px;
+        line-height: 1.6;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 991px) {
+        .keluhan-title {
+          font-size: 26px;
+        }
+        .keluhan-card-body {
+          padding: 18px;
+        }
+        .keluhan-chip {
+          display: none;
+        }
+      }
+      @media (max-width: 767px) {
+        .keluhan-section {
+          padding: 55px 0;
+        }
+        .keluhan-title {
+          font-size: 22px;
+        }
+        .keluhan-subtitle {
+          font-size: 14px;
+        }
+        .keluhan-card-head {
+          padding: 16px 16px;
+        }
+        .keluhan-card-body {
+          padding: 16px;
+        }
+        .keluhan-input .form-control {
+          padding-left: 42px;
+        }
+        .keluhan-actions {
+          flex-direction: column;
+        }
+        .btn-keluhan-primary,
+        .btn-keluhan-ghost {
+          width: 100%;
+        }
+      }
+      /* ===== HERO BACKGROUND DESA ===== */
+      .hero-desa {
+        position: relative;
+        width: 100%;
+        height: 140vh;
+        min-height: 480px;
+        background: url("assets/images/slider/batas.jpeg") center center / cover
+          no-repeat;
+        display: flex;
+        align-items: center;
+      }
+
+      .hero-desa::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(
+          180deg,
+          rgba(0, 0, 0, 0.45) 0%,
+          rgba(0, 0, 0, 0.25) 40%,
+          rgba(0, 0, 0, 0.55) 100%
+        );
+      }
+
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        color: #fff;
+        text-align: center;
+        width: 100%;
+      }
+
+      .hero-content h1 {
+        font-size: 48px;
+        font-weight: 800;
+        margin-bottom: 12px;
+      }
+
+      .hero-content p {
+        font-size: 18px;
+        max-width: 750px;
+        margin: auto;
+        opacity: 0.95;
+      }
+
+      @media (max-width: 768px) {
+        .hero-desa {
+          height: 60vh;
+        }
+        .hero-content h1 {
+          font-size: 30px;
+        }
+        .hero-content p {
+          font-size: 15px;
+        }
+      }
+      .wilayah-info {
+        padding: 80px 0;
+        background: #f7f7f7;
+      }
+      .wilayah-top {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .wilayah-top,
+      .wilayah-bottom {
+        margin-top: 40px;
+      }
+
+      .wilayah-card {
+        background: #fff;
+        border-radius: 16px;
+        padding: 28px 20px;
+        text-align: center;
+        box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+        margin-bottom: 25px;
+        transition: 0.3s ease;
+      }
+
+      .wilayah-card i {
+        font-size: 36px;
+        color: #f17127;
+        margin-bottom: 12px;
+      }
+
+      .wilayah-card h4 {
+        font-weight: 800;
+        margin-bottom: 6px;
+        color: #222;
+      }
+
+      .wilayah-card p {
+        font-size: 16px;
+        color: #555;
+        margin: 0;
+      }
+
+      .wilayah-card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 18px 36px rgba(0, 0, 0, 0.12);
+      }
+
+      .wilayah-card.highlight {
+        background: linear-gradient(135deg, #f17127, #ff914d);
+        color: #fff;
+      }
+
+      .wilayah-card.highlight i,
+      .wilayah-card.highlight h4,
+      .wilayah-card.highlight p {
+        color: #fff;
+      }
+      /* ==== FIX JUDUL PROFIL WILAYAH BIAR TIDAK PECAH DI HP ==== */
+      .box-title-desc .title {
+        display: block !important;
+        text-align: center;
+        letter-spacing: normal !important;
+        word-spacing: normal !important;
+        line-height: 1.3;
+      }
+
+      .box-title-desc .title span {
+        display: inline-block;
+        padding: 0 12px;
+        white-space: normal;
+      }
+
+      /* ukuran responsif */
+      @media (max-width: 767px) {
+        .box-title-desc .title {
+          font-size: 22px !important;
+        }
+      }
+    </style>
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+  </head>
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- START SCOPE HEADER -->
+      <!-- <header class="header-wrapper">
+        <div class="container">
+          <div class="box-header">
+            <div class="introduce">
+              <span>
+                Selamat datang di PT. Apecsa Optima Solusi
+              </span>
+            </div>
+            <div class="content">
+              <ul>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <span>admin@apecsa-indonesia.com</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-phone"></i>
+                  </div>
+                  <span>(021) 234 454</span>
+                </li>
+                <li>
+                  <div class="icon">
+                    <i class="fa fa-map-marker"></i>
+                  </div>
+                  <span>Cilandak, Jakarta Selatan</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header> -->
+      <!-- END SCOPE HEADER -->
+
+      <!-- START SCOPE NAVBAR BOOTSTRAP -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">
+                  <img src="assets/images/logo/remove.png" alt="ApecsaOS" />
+                </a>
+              </div>
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li><a href="index.html">Beranda</a></li>
+                  <li><a href="aboutus.html">Tentang Desa</a></li>
+                  <li><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li><a href="career.html">Informasi</a></li>
+                  <li class="active"><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <!-- END SCOPE NAVBAR BOOTSTRAP -->
+
+      <!-- START SCOPE MAPS GOOGLE -->
+      <!-- START HERO BACKGROUND DESA -->
+      <section class="hero-desa">
+        <div class="container">
+          <div class="hero-content"></div>
+        </div>
+      </section>
+      <!-- END HERO BACKGROUND DESA -->
+      <section class="wilayah-info">
+        <div class="container">
+          <div class="col-md-12 text-center box-title-desc">
+            <div class="title color-black bdr-btm-gray">
+              <span class="bg-section">Profil Wilayah Desa Susukan</span>
+            </div>
+            <div class="desc color-black">
+              Gambaran luas wilayah, batas perbatasan desa, dan jumlah penduduk
+              saat ini
+            </div>
+          </div>
+
+          <!-- LUAS & PERBATASAN -->
+          <div class="row wilayah-top text-center">
+            <div class="col-md-4 col-sm-6">
+              <div class="wilayah-card">
+                <i class="fa fa-arrows-alt"></i>
+                <h4>Luas Wilayah</h4>
+                <p>± 271,109 Hektar</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="wilayah-card">
+                <i class="fa fa-map-signs"></i>
+                <h4>Batas Utara</h4>
+                <p>Desa Dermasari</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="wilayah-card">
+                <i class="fa fa-map-signs"></i>
+                <h4>Batas Selatan</h4>
+                <p>Desa Gemelum kulon dan Wetan</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6">
+              <div class="wilayah-card">
+                <i class="fa fa-map-signs"></i>
+                <h4>Batas Timur</h4>
+                <p>Desa Kedawung</p>
+              </div>
+            </div>
+
+            <div class="col-md-4 col-sm-6 col-md-offset-2">
+              <div class="wilayah-card">
+                <i class="fa fa-map-signs"></i>
+                <h4>Batas Barat</h4>
+                <p>Desa Penerusan Wetan dan Kemranggon</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- END SCOPE MAPS GOOGLE -->
+
+      <!-- START SCOPE INFORMATION ADDRESS -->
+      <div class="adresses">
+        <div class="list-data">
+          <ul>
+            <li>
+              <div class="icon">
+                <i class="fa fa-map-marker"></i>
+              </div>
+              <div class="info">
+                Jl. Raya Susukan, Desa Susukan, Kecamatan Susukan, Kabupaten
+                Banjarnegara.
+              </div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-phone"></i>
+              </div>
+              <div class="info">Juliadi (082136234445)</div>
+              <div class="info">Juliadi (082136234445)</div>
+            </li>
+            <li>
+              <div class="icon">
+                <i class="fa fa-envelope"></i>
+              </div>
+              <div class="info">dssusukan01@gmail.com</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- END SCOPE INFORMATION ADDRESS -->
+
+      <!-- START SCOPE FORM KELUHAN WARGA -->
+      <!-- START SCOPE FORM KELUHAN WARGA (MODERN) -->
+      <section class="keluhan-section">
+        <div class="container keluhan-wrap">
+          <div class="col-md-12 keluhan-hero">
+            <span class="keluhan-badge">
+              <i class="fa fa-bullhorn"></i> PELAYANAN MASYARAKAT
+            </span>
+            <h2 class="keluhan-title">Keluhan, Saran, dan Aspirasi Warga</h2>
+            <p class="keluhan-subtitle">
+              Form ini digunakan untuk menyampaikan keluhan atau masukan terkait
+              pelayanan, fasilitas umum, maupun informasi desa. Data tidak
+              dikirim ke email (hanya untuk pencatatan di website).
+            </p>
+          </div>
+
+          <div class="col-md-8 col-md-offset-2">
+            <div class="keluhan-card">
+              <div class="keluhan-card-head">
+                <div class="left">
+                  <div class="keluhan-icon-bubble">
+                    <i class="fa fa-comments"></i>
+                  </div>
+                  <div>
+                    <h3>Form Laporan Warga</h3>
+                    <p>Isi dengan jelas agar mudah ditindaklanjuti</p>
+                  </div>
+                </div>
+                <div class="keluhan-chip">
+                  <i class="fa fa-shield"></i> Aman & Terdata
+                </div>
+              </div>
+
+              <div class="keluhan-card-body keluhan-grid">
+                <div id="notif"></div>
+                <script>
+                  (function () {
+                    var url = new URL(window.location.href);
+                    var notif = document.getElementById("notif");
+                    var s = url.searchParams.get("success");
+                    var e = url.searchParams.get("error");
+                    var msg = url.searchParams.get("msg");
+
+                    if (s === "1") {
+                      notif.innerHTML =
+                        '<div class="alert alert-success">✅ Keluhan berhasil dikirim ke email Desa Susukan. Terima kasih.</div>';
+                    }
+                    if (e === "1") {
+                      notif.innerHTML =
+                        '<div class="alert alert-danger">⚠️ Mohon lengkapi data wajib.</div>';
+                    }
+                    if (e === "2") {
+                      notif.innerHTML =
+                        '<div class="alert alert-danger">❌ Gagal mengirim email: ' +
+                        decodeURIComponent(msg || "Cek konfigurasi SMTP") +
+                        "</div>";
+                    }
+                  })();
+                </script>
+
+                <form action="kirim_keluhan.php" method="post">
+                  <div class="row">
+                    <div class="col-md-6 keluhan-field">
+                      <label
+                        >Nama Lengkap
+                        <span style="color: #f17127">*</span></label
+                      >
+                      <div class="keluhan-input">
+                        <input
+                          type="text"
+                          name="nama"
+                          class="form-control"
+                          placeholder="Contoh: Budi Santoso"
+                          required
+                        />
+                        <i class="fa fa-user"></i>
+                      </div>
+                    </div>
+
+                    <div class="col-md-6 keluhan-field">
+                      <label>No. HP (opsional)</label>
+                      <div class="keluhan-input">
+                        <input
+                          type="text"
+                          name="no_hp"
+                          class="form-control"
+                          placeholder="Contoh: 08xxxxxxxxxx"
+                        />
+                        <i class="fa fa-phone"></i>
+                      </div>
+                      <div class="keluhan-help">
+                        Jika diisi, memudahkan konfirmasi tindak lanjut.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 keluhan-field">
+                      <label
+                        >Alamat / Dusun
+                        <span style="color: #f17127">*</span></label
+                      >
+                      <div class="keluhan-input">
+                        <input
+                          type="text"
+                          name="alamat"
+                          class="form-control"
+                          placeholder="Contoh: Dusun Karangsari, RT 02/RW 01"
+                          required
+                        />
+                        <i class="fa fa-map-marker"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 keluhan-field">
+                      <label
+                        >Jenis Laporan
+                        <span style="color: #f17127">*</span></label
+                      >
+                      <div class="keluhan-input">
+                        <select name="jenis" class="form-control" required>
+                          <option value="" disabled selected>
+                            -- Pilih Jenis --
+                          </option>
+                          <option value="Keluhan Pelayanan">
+                            Keluhan Pelayanan
+                          </option>
+                          <option value="Kerusakan Fasilitas Umum">
+                            Kerusakan Fasilitas Umum
+                          </option>
+                          <option value="Aspirasi / Saran">
+                            Aspirasi / Saran
+                          </option>
+                          <option value="Keamanan / Ketertiban">
+                            Keamanan / Ketertiban
+                          </option>
+                          <option value="Lainnya">Lainnya</option>
+                        </select>
+                        <i class="fa fa-list"></i>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12 keluhan-field">
+                      <label
+                        >Isi Keluhan / Pesan
+                        <span style="color: #f17127">*</span></label
+                      >
+                      <div class="keluhan-input">
+                        <textarea
+                          name="pesan"
+                          class="form-control"
+                          rows="6"
+                          placeholder="Tuliskan kronologi/masalah/saran secara jelas. Sertakan lokasi, waktu, dan detail masalah..."
+                          required
+                        ></textarea>
+                        <i class="fa fa-pencil"></i>
+                      </div>
+                      <div class="keluhan-help">
+                        Tips: Sertakan lokasi yang jelas (dusun/RT/RW), waktu
+                        kejadian, dan detail masalah.
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="keluhan-actions">
+                        <button type="submit" class="btn btn-keluhan-primary">
+                          <i class="fa fa-paper-plane"></i> Kirim Laporan
+                        </button>
+                        <button type="reset" class="btn btn-keluhan-ghost">
+                          <i class="fa fa-refresh"></i> Reset
+                        </button>
+                      </div>
+
+                      <div class="keluhan-note">
+                        <i class="fa fa-info-circle"></i>
+                        Laporan akan masuk ke email resmi desa. Pastikan data
+                        diisi benar agar dapat ditindaklanjuti.
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- END SCOPE FORM KELUHAN WARGA (MODERN) -->
+
+      <!-- START SCOPE FOOTER -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img src="assets/images/logo/background.png" alt="" />
+              </div>
+              <div class="social-media">
+                <a href="#" class="btn btn-default btn-social-media facebook">
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media twitter">
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media linkedin">
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a href="#" class="btn btn-default btn-social-media instagram">
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- END SCOPE FOOTER -->
+      <a
+        href=""
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Back to top"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+  </body>
+
+  <!-- SCOPE JAVASCRIPT -->
+  <script src="assets/js/bootstrap.js"></script>
+  <script src="assets/js/jquery.scrolltofixed.js"></script>
+  <script src="assets/js/wow.min.js"></script>
+  <script src="assets/js/jquery.scrollspeed.js"></script>
+  <script src="assets/js/main.js"></script>
+</html>

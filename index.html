@@ -1,0 +1,1260 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <!-- =====================================================
+         PROFIL DESA SUSUKAN - RESPONSIVE LANDING PAGE
+         ===================================================== -->
+    <title>Profil Desa Susukan</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- PENTING: cukup satu base -->
+    <base href="/profil_desa/" />
+
+    <!-- RESPONSIVE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- PWA/Theme -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Desa Susukan" />
+    <meta name="theme-color" content="#F17127" />
+    <meta name="msapplication-navbutton-color" content="#F17127" />
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="black-translucent"
+    />
+    <meta name="HandheldFriendly" content="true" />
+
+    <!-- SEO BASIC -->
+    <meta
+      name="description"
+      content="Profil Desa Susukan: informasi desa, sejarah, visi misi, pemerintahan desa, layanan, dan kontak."
+    />
+    <meta
+      name="keywords"
+      content="Desa Susukan, Profil Desa, Pemerintahan Desa, Layanan Desa, Informasi Desa"
+    />
+    <meta name="author" content="Pemerintah Desa Susukan" />
+
+    <!-- SHARE (OG/Twitter) -->
+    <meta property="og:url" content="http://urlnya.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Profil Desa Susukan" />
+    <meta
+      property="og:description"
+      content="Informasi resmi Desa Susukan: sejarah, visi-misi, perangkat desa, layanan, dan kontak."
+    />
+    <meta property="og:image" content="assets/images/slider/slider_1.jpg" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Profil Desa Susukan" />
+    <meta
+      name="twitter:description"
+      content="Informasi resmi Desa Susukan: sejarah, visi-misi, perangkat desa, layanan, dan kontak."
+    />
+    <meta name="twitter:image" content="assets/images/slider/slider_1.jpg" />
+
+    <!-- ICON -->
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+
+    <!-- CSS (pakai punya kamu) -->
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/revolution-slider.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+
+    <!-- jQuery -->
+    <script src="assets/js/jquery-3.1.0.min.js"></script>
+
+    <!-- =====================================================
+         PATCH RESPONSIVE + MODERN LOOK (TANPA MERUSAK TEMPLATE)
+         ===================================================== -->
+    <style>
+      /* Biar section enak di mobile */
+      body {
+        overflow-x: hidden;
+      }
+
+      /* Navbar brand image responsive */
+      .navbar-brand img {
+        height: 42px;
+        width: auto;
+      }
+      @media (max-width: 767px) {
+        .navbar-brand img {
+          height: 36px;
+        }
+      }
+
+      /* Section padding konsisten */
+      section {
+        padding: 60px 0;
+      }
+      @media (max-width: 767px) {
+        section {
+          padding: 40px 0;
+        }
+      }
+
+      /* Judul section lebih jelas */
+      .box-title-desc .title {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .box-title-desc .desc {
+        line-height: 1.8;
+        font-size: 15px;
+      }
+
+      /* Kartu layanan/fitur supaya rata & responsive */
+      .list-categories {
+        height: 100%;
+        border-radius: 14px;
+        overflow: hidden;
+      }
+      .list-categories .description p {
+        margin-bottom: 0;
+      }
+      .box-categories {
+        width: 100%;
+      }
+
+      /* Center semua kolom kartu (1 item pun tetap di tengah) */
+      .box-categories {
+        text-align: center;
+        font-size: 0; /* hilangin jarak inline-block */
+      }
+      .box-categories > [class*="col-"] {
+        float: none !important;
+        display: inline-block !important;
+        vertical-align: top;
+        text-align: left; /* isi kartu tetap rata kiri */
+        font-size: 14px; /* balikin font */
+      }
+
+      /* =========================
+         FOTO KADES (BULET & BAGUS)
+         ========================= */
+      .kades-photo {
+        display: flex;
+        justify-content: center;
+        margin: 0px 0 14px;
+      }
+
+      .kades-photo img {
+        width: 300px;
+        height: 300px;
+        object-fit: cover; /* biar gak gepeng */
+        border-radius: 50%; /* bulet */
+        border: 4px solid #f26c9a; /* ring pink */
+        box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
+        background: #fff;
+      }
+
+      /* Biar jarak judulnya enak */
+      .list-categories .title {
+        margin-top: 6px;
+      }
+
+      /* Responsive */
+      @media (max-width: 767px) {
+        .kades-photo img {
+          width: 105px;
+          height: 105px;
+        }
+      }
+
+      /* Step/VisiMisi responsive */
+      .stepwizard-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+      }
+      .stepwizard-step {
+        flex: 1 1 160px;
+        max-width: 220px;
+        text-align: center;
+      }
+
+      /* Testimonial spacing */
+      .box-testimonial .item {
+        margin: 0 8px;
+      }
+
+      /* Tombol nav testimonial biar enak di mobile */
+      .testimonial-client .text-center .btn {
+        margin: 6px 6px;
+      }
+
+      /* Footer responsive */
+      .footer-wrapper .image img {
+        max-width: 220px;
+        height: auto;
+      }
+      @media (max-width: 767px) {
+        .footer-wrapper .image img {
+          max-width: 180px;
+        }
+      }
+
+      /* Aksesibilitas: focus ring */
+      a:focus,
+      button:focus {
+        outline: 2px dashed rgba(241, 113, 39, 0.7);
+        outline-offset: 3px;
+      }
+
+      /* Wrapper agar tinggi sama */
+      .visi-misi-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .visi-misi-wrapper > div {
+        display: flex;
+      }
+
+      /* VISI & MISI sama tinggi */
+      .visi-box,
+      .misi-box {
+        width: 100%;
+        height: 100%;
+        border-radius: 16px;
+        padding: 28px;
+        box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+        background: #fff;
+        position: relative;
+      }
+
+      /* ===== GARIS / AKSEN PINK ===== */
+      .visi-border::before,
+      .misi-border::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 20px;
+        bottom: 20px;
+        width: 6px;
+        background: #f26c9a; /* pink */
+        border-radius: 4px;
+      }
+
+      /* ===== VISI ===== */
+      .visi-title {
+        font-weight: 800;
+        color: #f26c9a;
+        margin-bottom: 10px;
+      }
+
+      /* konten visi di tengah */
+      .visi-content {
+        flex: 1;
+        display: flex;
+        align-items: center; /* tengah vertikal */
+        justify-content: center; /* tengah horizontal */
+        text-align: center;
+      }
+
+      .visi-text {
+        max-width: 420px;
+        font-size: 17px;
+        line-height: 2;
+        font-style: italic;
+        color: #333;
+      }
+
+      /* ===== MISI ===== */
+      .misi-box {
+        background: #f26c9a;
+        color: #fff;
+      }
+      .misi-title {
+        font-weight: 800;
+        color: #fff;
+        margin-bottom: 15px;
+      }
+      .misi-list {
+        padding-left: 20px;
+        line-height: 1.8;
+      }
+      .misi-list li {
+        margin-bottom: 10px;
+      }
+
+      /* =========================
+         SECTION APBN DESA MODERN
+         ========================= */
+      #apbn-desa {
+        background: #fff;
+        padding: 70px 0;
+      }
+
+      .apbn-wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 40px;
+      }
+
+      .apbn-info {
+        flex: 1 1 380px;
+      }
+
+      .apbn-info h3 {
+        font-weight: 800;
+        color: #f26c9a;
+        margin-bottom: 12px;
+      }
+
+      .apbn-info p {
+        color: #555;
+        line-height: 1.9;
+        font-size: 15px;
+      }
+
+      .apbn-badge {
+        display: inline-block;
+        background: rgba(242, 108, 154, 0.15);
+        color: #f26c9a;
+        padding: 6px 14px;
+        border-radius: 999px;
+        font-weight: 700;
+        font-size: 12px;
+        margin-bottom: 14px;
+      }
+
+      .apbn-photo-box {
+        flex: 1 1 320px;
+        text-align: center;
+      }
+
+      .apbn-photo-box img {
+        width: 100%;
+        max-width: 360px;
+        height: auto;
+        border-radius: 18px;
+        border: 4px solid #f26c9a;
+        box-shadow: 0 14px 34px rgba(0, 0, 0, 0.14);
+        transition: 0.3s ease;
+        cursor: zoom-in;
+      }
+
+      .apbn-photo-box img:hover {
+        transform: scale(1.04);
+      }
+
+      /* Mobile */
+      @media (max-width: 767px) {
+        .apbn-wrapper {
+          text-align: center;
+        }
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 767px) {
+        .visi-box,
+        .misi-box {
+          margin-bottom: 20px;
+        }
+      }
+
+      /* NAVBAR TIDAK DIUBAH */
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+
+      /* BRAND TETAP NORMAL */
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+
+      /* LOGO SAJA YANG DIBESARKAN */
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px; /* dasar */
+        width: auto;
+        display: block;
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
+      }
+
+      /* ========= FIX LOGO FOOTER (BIAR AMAN DAN GAK IKUT KEPAKSA) ========= */
+      footer.footer-wrapper .box-footer .image img {
+        width: 400px; /* atur sesuai kebutuhan */
+        height: auto;
+        transform: none !important;
+      }
+
+      /* =========================
+         MODAL ZOOM FOTO APBN
+         ========================= */
+      .apbn-modal {
+        display: none;
+        position: fixed;
+        z-index: 999999;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.78);
+        padding: 18px;
+      }
+      .apbn-modal.is-open {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .apbn-modal-card {
+        width: min(980px, 96vw);
+        background: #fff;
+        border-radius: 18px;
+        overflow: hidden;
+        box-shadow: 0 18px 60px rgba(0, 0, 0, 0.35);
+        animation: apbnPop 0.18s ease;
+      }
+      @keyframes apbnPop {
+        from {
+          transform: scale(0.97);
+          opacity: 0.6;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .apbn-modal-header {
+        background: #f26c9a;
+        color: #fff;
+        padding: 12px 14px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .apbn-modal-header .apbn-modal-title {
+        margin: 0;
+        font-weight: 800;
+        font-size: 14px;
+      }
+      .apbn-modal-close {
+        width: 38px;
+        height: 38px;
+        border: 0;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.2);
+        color: #fff;
+        font-size: 20px;
+        line-height: 38px;
+        text-align: center;
+        cursor: pointer;
+      }
+      .apbn-modal-body {
+        padding: 12px;
+      }
+      .apbn-modal-body img {
+        width: 100%;
+        height: auto;
+        border-radius: 14px;
+        display: block;
+      }
+      .apbn-modal-caption {
+        padding: 0 12px 14px;
+        color: #666;
+        font-size: 13px;
+        line-height: 1.7;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="apecsaos-wrapper">
+      <!-- =======================
+           NAVBAR
+           ======================= -->
+      <div id="navbar-fixed-apecsaos">
+        <nav class="navbar navbar-default">
+          <div class="container">
+            <div class="col-md-12">
+              <div class="navbar-header">
+                <button
+                  type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#navbar-apecsaos"
+                  aria-expanded="false"
+                >
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+
+                <a
+                  class="navbar-brand"
+                  href="index.html"
+                  aria-label="Profil Desa Susukan"
+                >
+                  <img
+                    src="assets/images/logo/remove.png"
+                    alt="Logo Desa Susukan"
+                  />
+                </a>
+              </div>
+
+              <div class="collapse navbar-collapse" id="navbar-apecsaos">
+                <ul class="nav navbar-nav navbar-right">
+                  <li class="active"><a href="index.html">Beranda</a></li>
+                  <li><a href="aboutus.html">Tentang Desa</a></li>
+                  <li><a href="services.html">Layanan</a></li>
+                  <li><a href="portfolio.html">Galeri</a></li>
+                  <li><a href="career.html">Informasi</a></li>
+                  <li><a href="contactus.html">Kontak</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <!-- =======================
+           HERO / SLIDER
+           ======================= -->
+      <div class="slider-apecsa" aria-label="Slider informasi desa">
+        <div class="tp-banner-container">
+          <div class="tp-banner">
+            <ul>
+              <li
+                data-transition="slotzoom-horizontal"
+                data-slotamount="1"
+                data-masterspeed="1000"
+                data-thumb="assets/images/slider/background_1.jpeg"
+                data-saveperformance="off"
+                data-title="Desa Susukan"
+              >
+                <img
+                  src="assets/images/slider/background_1.jpeg"
+                  alt="Pemandangan Desa Susukan"
+                  data-bgposition="center top"
+                  data-bgfit="cover"
+                  data-bgrepeat="no-repeat"
+                />
+              </li>
+
+              <li
+                data-transition="curtain-3"
+                data-slotamount="1"
+                data-masterspeed="1300"
+                data-thumb="assets/images/slider/background_2.jpeg"
+                data-saveperformance="off"
+                data-title="Layanan Desa"
+              >
+                <img
+                  src="assets/images/slider/background_2.jpeg"
+                  alt="Pelayanan publik desa"
+                  data-bgposition="center top"
+                  data-bgfit="cover"
+                  data-bgrepeat="no-repeat"
+                />
+              </li>
+            </ul>
+            <div class="tp-bannertimer"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- =======================
+           PERIODE KEPALA DESA
+           ======================= -->
+      <section class="development-categories bg-gray" id="periode-kades">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="box-title-desc">
+                <div class="title color-black bdr-btm-gray">
+                  <span class="bg-section">Periode Kepala Desa</span>
+                </div>
+                <div class="desc color-black">
+                  Berikut adalah ringkasan periode kepemimpinan Kepala Desa
+                  Susukan dari masa ke masa. Silakan sesuaikan nama dan tahun
+                  sesuai data resmi desa.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-12">
+              <div class="row box-categories">
+                <div class="col-md-4 col-sm-6">
+                  <div class="list-categories">
+                    <div class="kades-photo">
+                      <img
+                        src="assets/images/client/kades_2.jpeg"
+                        alt="Kepala Desa Periode 2016-2022"
+                      />
+                    </div>
+                    <div class="title">Kades Periode 2019 – Sekarang</div>
+                    <div class="description">
+                      <p>
+                        Pengembangan program pemberdayaan warga, penguatan
+                        ekonomi lokal, serta peningkatan tata kelola
+                        pemerintahan desa.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <!-- Tambah item kalau perlu -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           LATAR BELAKANG
+           ======================= -->
+      <section class="bussiness-process bg-red-pink" id="latar-belakang">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-red-pink color-white">Latar Belakang</span>
+              </div>
+              <div class="desc color-white">
+                Desa Susukan merupakan desa yang terus berkembang dengan
+                semangat gotong royong. Website ini dibuat sebagai media
+                informasi resmi desa untuk memudahkan masyarakat mengakses
+                profil desa, layanan, serta informasi kegiatan dan potensi
+                lokal.
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="stepwizard">
+              <div class="stepwizard-row">
+                <div class="stepwizard-step">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-circle"
+                    aria-label="Transparansi Informasi"
+                  >
+                    <i class="fa fa-bullhorn"></i>
+                  </button>
+                  <p class="color-white">Transparansi</p>
+                </div>
+                <div class="stepwizard-step">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-circle"
+                    aria-label="Layanan Publik"
+                  >
+                    <i class="fa fa-gear"></i>
+                  </button>
+                  <p class="color-white">Layanan</p>
+                </div>
+                <div class="stepwizard-step">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-circle"
+                    aria-label="Pemberdayaan Warga"
+                  >
+                    <i class="fa fa-users"></i>
+                  </button>
+                  <p class="color-white">Pemberdayaan</p>
+                </div>
+                <div class="stepwizard-step">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-circle"
+                    aria-label="Potensi Desa"
+                  >
+                    <i class="fa fa-leaf"></i>
+                  </button>
+                  <p class="color-white">Potensi</p>
+                </div>
+                <div class="stepwizard-step">
+                  <button
+                    type="button"
+                    class="btn btn-default btn-circle"
+                    aria-label="Pelayanan Cepat"
+                  >
+                    <i class="fa fa-bolt"></i>
+                  </button>
+                  <p class="color-white">Cepat</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           VISI & MISI
+           ======================= -->
+      <section class="development-process bg-gray" id="visi-misi">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc text-center">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-section">Visi dan Misi Desa</span>
+              </div>
+              <div class="desc color-black">
+                Arah dan tujuan pembangunan Desa Susukan dalam mewujudkan
+                pemerintahan yang maju, mandiri, dan berkelanjutan.
+              </div>
+            </div>
+          </div>
+
+          <div class="row visi-misi-wrapper">
+            <div class="col-md-6 col-sm-12">
+              <div class="visi-box visi-border">
+                <h3 class="visi-title"><i class="fa fa-eye"></i> Visi Desa</h3>
+                <div class="visi-content">
+                  <p class="visi-text">
+                    “SUSUKAN BANGKIT MENUJU DESA YANG AGAMIS, BERMARTABAT,
+                    CERDAS & SEJAHTERA” (ABC - S).
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-6 col-sm-12">
+              <div class="misi-box misi-border">
+                <h3 class="misi-title">
+                  <i class="fa fa-bullseye"></i> Misi Desa
+                </h3>
+                <ol class="misi-list">
+                  <li>
+                    Mewujudkan masyarakat Desa Susukan yang berkualitas,
+                    kreatif, inovatif dengan memanfaatkan teknologi.
+                  </li>
+                  <li>
+                    Mewujudkan pemerintahan Desa Susukan yang handal untuk
+                    peningkatan pelayanan masyarakat.
+                  </li>
+                  <li>Mewujudkan kehidupan yang kondusif, dan agamis.</li>
+                  <li>
+                    Memperkuat ekonomi kerakyatan yang berbasis keunggulan lokal
+                    desa.
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           TRANSPARANSI APBN DESA
+           ======================= -->
+      <section id="apbn-desa">
+        <div class="container">
+          <div class="box-title-desc text-center">
+            <div class="title color-black bdr-btm-gray">
+              <span class="bg-section">Transparansi APBN Desa</span>
+            </div>
+            <div class="desc color-black">
+              Informasi terbuka penggunaan APBN/APBDes sebagai bentuk
+              akuntabilitas Pemerintah Desa Susukan kepada masyarakat.
+            </div>
+          </div>
+
+          <div class="apbn-wrapper">
+            <div class="apbn-info">
+              <span class="apbn-badge">APBN DESA SUSUKAN</span>
+              <h3>Pengelolaan Dana Desa yang Terbuka & Bertanggung Jawab</h3>
+              <p>
+                Pemerintah Desa Susukan berkomitmen menjalankan pembangunan desa
+                secara transparan melalui publikasi penggunaan APBN/APBDes.
+                Setiap program pembangunan, pemberdayaan masyarakat, serta
+                pelayanan publik didukung oleh pengelolaan dana yang akuntabel
+                dan dapat diakses masyarakat.
+              </p>
+            </div>
+
+            <!-- FOTO APBN (KLIK UNTUK ZOOM) -->
+            <div class="apbn-photo-box">
+              <img
+                id="apbnThumb"
+                src="assets/images/client/apbn.jpeg"
+                alt="Infografis APBN Desa Susukan"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- MODAL APBN -->
+        <div class="apbn-modal" id="apbnModal" aria-hidden="true">
+          <div
+            class="apbn-modal-card"
+            role="dialog"
+            aria-label="Preview APBN Desa Susukan"
+          >
+            <div class="apbn-modal-header">
+              <p class="apbn-modal-title">
+                Infografis APBN/APBDes Desa Susukan
+              </p>
+              <button
+                class="apbn-modal-close"
+                id="apbnClose"
+                aria-label="Tutup"
+              >
+                &times;
+              </button>
+            </div>
+
+            <div class="apbn-modal-body">
+              <img
+                id="apbnModalImg"
+                src="assets/images/client/apbn.jpeg"
+                alt="Preview APBN Desa Susukan"
+              />
+            </div>
+
+            <div class="apbn-modal-caption">
+              Klik area gelap untuk menutup, atau tekan <b>ESC</b>.
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           GALERI / POTENSI
+           ======================= -->
+      <section
+        class="parallax-apecsa bg-img-1 introduce-wrapper portfolio"
+        id="galeri"
+      >
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-white">
+                <span class="color-white">Galeri & Potensi Desa</span>
+              </div>
+              <div class="desc color-white">
+                Dokumentasi kegiatan masyarakat, potensi ekonomi lokal, serta
+                destinasi/keunggulan Desa Susukan.
+              </div>
+              <a href="portfolio.html" class="btn btn-apecsa-red btn-lg">
+                <i class="fa fa-image"></i>
+                Lihat Galeri
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           TESTIMONIAL
+           ======================= -->
+      <section class="testimonial-client" id="suara-warga">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-black bdr-btm-gray">
+                <span class="bg-section">Suara Warga</span>
+              </div>
+              <div class="desc color-black">
+                Tanggapan masyarakat terkait pelayanan dan kegiatan di Desa
+                Susukan. (Silakan ganti dengan data/testimoni asli.)
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12">
+            <div class="box-testimonial" id="owl-slide-testimonial">
+              <div class="col-lg-12">
+                <div class="item list-testimonial">
+                  <div class="box-quote">
+                    <p>
+                      Pelayanan administrasi sekarang lebih cepat dan mudah.
+                      Informasi desa juga makin terbuka.
+                    </p>
+                  </div>
+                  <div class="box-client">
+                    <div class="box-avatar">
+                      <div class="avatar">
+                        <img
+                          src="assets/images/client/arief.jpeg"
+                          alt="Warga Desa"
+                        />
+                      </div>
+                    </div>
+                    <div class="box-name-wrapper">
+                      <div class="name">
+                        <span class="name">
+                          Warga Desa -
+                          <span class="position">Arief Dimas H</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="item list-testimonial">
+                  <div class="box-quote">
+                    <p>
+                      Website profil desa ini jadikanlah untuk memajukan Desa
+                      Susukan yang maju dan mendunia.
+                    </p>
+                  </div>
+                  <div class="box-client">
+                    <div class="box-avatar">
+                      <div class="avatar">
+                        <img
+                          src="assets/images/client/fakhtur.jpeg"
+                          alt="Warga Desa"
+                        />
+                      </div>
+                    </div>
+                    <div class="box-name-wrapper">
+                      <div class="name">
+                        <span class="name">
+                          KKN Unsoed 2026 -
+                          <span class="position">Ramadhan Fakhtur R</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="item list-testimonial">
+                  <div class="box-quote">
+                    <p>
+                      Kegiatan kemasyarakatan makin aktif. Program desa terasa
+                      lebih terarah dan bermanfaat.
+                    </p>
+                  </div>
+                  <div class="box-client">
+                    <div class="box-avatar">
+                      <div class="avatar">
+                        <img
+                          src="assets/images/client/orin.jpeg"
+                          alt="Warga Desa"
+                        />
+                      </div>
+                    </div>
+                    <div class="box-name-wrapper">
+                      <div class="name">
+                        <span class="name">
+                          Warga Desa -
+                          <span class="position">Tokoh Masyarakat</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-lg-12">
+                <div class="item list-testimonial">
+                  <div class="box-quote">
+                    <p>
+                      Website profil desa ini membantu sekali untuk melihat
+                      informasi layanan dan pengumuman terbaru.
+                    </p>
+                  </div>
+                  <div class="box-client">
+                    <div class="box-avatar">
+                      <div class="avatar">
+                        <img
+                          src="assets/images/client/adel.jpg"
+                          alt="Warga Desa"
+                        />
+                      </div>
+                    </div>
+                    <div class="box-name-wrapper">
+                      <div class="name">
+                        <span class="name">
+                          KKN Unsoed 2026 -
+                          <span class="position">Adelia Najmi Raissa</span>
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="text-center">
+              <a class="btn prev btn-default" aria-label="Sebelumnya"
+                ><i class="fa fa-angle-left"></i
+              ></a>
+              <a class="btn next btn-default" aria-label="Berikutnya"
+                ><i class="fa fa-angle-right"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           CONTACT US
+           ======================= -->
+      <section
+        class="parallax-apecsa bg-img-2 introduce-wrapper contact-us"
+        id="kontak"
+      >
+        <div class="bg-overlay-full"></div>
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-title-desc">
+              <div class="title color-white">
+                <span>Kontak Pemerintah Desa</span>
+              </div>
+              <div class="desc color-white">
+                Untuk informasi layanan, administrasi, atau kegiatan desa,
+                silakan hubungi kami melalui halaman kontak.
+              </div>
+              <a href="contactus.html" class="btn btn-apecsa-red btn-lg">
+                <i class="fa fa-envelope"></i>
+                Hubungi Desa
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =======================
+           FOOTER
+           ======================= -->
+      <footer class="footer-wrapper diagonal-shadow">
+        <div class="container">
+          <div class="col-md-12">
+            <div class="box-footer">
+              <div class="image">
+                <img
+                  src="assets/images/logo/background.png"
+                  alt="Logo Desa Susukan"
+                />
+              </div>
+
+              <div class="social-media">
+                <a
+                  href="#"
+                  class="btn btn-default btn-social-media facebook"
+                  aria-label="Facebook"
+                >
+                  <i class="fa fa-facebook"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-default btn-social-media twitter"
+                  aria-label="Twitter"
+                >
+                  <i class="fa fa-twitter"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-default btn-social-media linkedin"
+                  aria-label="LinkedIn"
+                >
+                  <i class="fa fa-linkedin"></i>
+                </a>
+                <a
+                  href="#"
+                  class="btn btn-default btn-social-media instagram"
+                  aria-label="Instagram"
+                >
+                  <i class="fa fa-instagram"></i>
+                </a>
+              </div>
+
+              <div class="corpyright">
+                <span
+                  >&copy; <span id="year"></span> Pemerintah Desa Susukan</span
+                ><br />
+                <span>Melayani dengan cepat, transparan, dan akuntabel</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <a
+        href="#"
+        id="back-to-top"
+        data-toggle="tooltip"
+        data-placement="top"
+        title="Kembali ke atas"
+      >
+        <i class="fa fa-chevron-up"></i>
+      </a>
+    </div>
+
+    <!-- JS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.scrolltofixed.js"></script>
+    <script src="assets/js/revolution.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/jquery.scrollspeed.js"></script>
+    <script src="assets/js/main.js"></script>
+
+    <script>
+      // Tahun otomatis
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+    <script>
+      (function ($) {
+        "use strict";
+
+        // Slider: aman kalau plugin tersedia
+        if ($(".slider-apecsa .tp-banner").length && $.fn.revolution) {
+          jQuery(".slider-apecsa .tp-banner")
+            .show()
+            .revolution({
+              delay: 10000,
+              startwidth: 1200,
+              startheight: 620,
+              hideThumbs: 600,
+
+              thumbWidth: 80,
+              thumbHeight: 50,
+              thumbAmount: 5,
+
+              navigationType: "bullet",
+              navigationArrows: "0",
+              navigationStyle: "preview4",
+
+              touchenabled: "on",
+              onHoverStop: "off",
+
+              swipe_velocity: 0.7,
+              swipe_min_touches: 1,
+              swipe_max_touches: 1,
+              drag_block_vertical: false,
+
+              parallax: "mouse",
+              parallaxBgFreeze: "on",
+              parallaxLevels: [7, 4, 3, 2, 5, 4, 3, 2, 1, 0],
+
+              keyboardNavigation: "off",
+
+              navigationHAlign: "center",
+              navigationVAlign: "bottom",
+              navigationHOffset: 0,
+              navigationVOffset: 20,
+
+              soloArrowLeftHalign: "left",
+              soloArrowLeftValign: "center",
+              soloArrowLeftHOffset: 20,
+              soloArrowLeftVOffset: 0,
+
+              soloArrowRightHalign: "right",
+              soloArrowRightValign: "center",
+              soloArrowRightHOffset: 20,
+              soloArrowRightVOffset: 0,
+
+              shadow: 0,
+              fullWidth: "on",
+              fullScreen: "off",
+
+              spinner: "spinner4",
+
+              stopLoop: "off",
+              stopAfterLoops: -1,
+              stopAtSlide: -1,
+
+              shuffle: "off",
+
+              autoHeight: "off",
+              forceFullWidth: "on",
+
+              hideThumbsOnMobile: "on",
+              hideNavDelayOnMobile: 1500,
+              hideBulletsOnMobile: "on",
+              hideArrowsOnMobile: "on",
+              hideThumbsUnderResolution: 0,
+
+              hideSliderAtLimit: 0,
+              hideCaptionAtLimit: 0,
+              hideAllCaptionAtLilmit: 0,
+              startWithSlide: 0,
+              videoJsPath: "",
+              fullScreenOffsetContainer: ".slider-apecsa",
+            });
+        }
+      })(window.jQuery);
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        // Tooltip bootstrap (aman)
+        if ($.fn.tooltip) {
+          $('[data-toggle="tooltip"]').tooltip();
+        }
+
+        // Owl Carousel: aman kalau plugin tersedia
+        var owl = $("#owl-slide-testimonial");
+        if (owl.length && $.fn.owlCarousel) {
+          owl.owlCarousel({
+            items: 2,
+            itemsDesktop: [1000, 2],
+            itemsDesktopSmall: [900, 2],
+            itemsTablet: [600, 1],
+            itemsMobile: false,
+          });
+
+          $(".next").click(function () {
+            owl.trigger("owl.next");
+          });
+          $(".prev").click(function () {
+            owl.trigger("owl.prev");
+          });
+        }
+      });
+    </script>
+
+    <!-- APBN MODAL SCRIPT -->
+    <script>
+      (function () {
+        var thumb = document.getElementById("apbnThumb");
+        var modal = document.getElementById("apbnModal");
+        var closeBtn = document.getElementById("apbnClose");
+        var modalImg = document.getElementById("apbnModalImg");
+
+        if (!thumb || !modal || !closeBtn || !modalImg) return;
+
+        function openModal() {
+          modal.classList.add("is-open");
+          modal.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeModal() {
+          modal.classList.remove("is-open");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.style.overflow = "";
+        }
+
+        thumb.addEventListener("click", function () {
+          modalImg.src = thumb.getAttribute("src");
+          openModal();
+        });
+
+        closeBtn.addEventListener("click", closeModal);
+
+        modal.addEventListener("click", function (e) {
+          if (e.target === modal) closeModal();
+        });
+
+        document.addEventListener("keydown", function (e) {
+          if (e.key === "Escape" && modal.classList.contains("is-open")) {
+            closeModal();
+          }
+        });
+      })();
+    </script>
+  </body>
+</html>
