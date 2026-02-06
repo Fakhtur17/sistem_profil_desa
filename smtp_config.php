@@ -17,7 +17,7 @@ return [
   'host'       => 'smtp.gmail.com',
   'port'       => 587,
   'username'   => 'dssusukan01@gmail.com',   // GANTI
-  'password'   => 'kdnl ybml lrtm rcqv',      // GANTI (WAJIB app password)
+  'password'   => 'mdoj tswh csmr vbcc',      // GANTI (WAJIB app password)
   'encryption' => 'tls',
 
 ];

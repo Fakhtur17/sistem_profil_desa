@@ -8,9 +8,6 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
-    <!-- PENTING: cukup satu base -->
-    <base href="/profil_desa/" />
-
     <!-- RESPONSIVE -->
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -56,17 +53,30 @@
     <meta name="twitter:image" content="assets/images/slider/slider_1.jpg" />
 
     <!-- ICON -->
-    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
+    <!-- HAPUS <base href="/profil_desa/"> -->
 
-    <!-- CSS (pakai punya kamu) -->
-    <link rel="stylesheet" href="assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="assets/css/font-awesome.css" />
-    <link rel="stylesheet" href="assets/css/animate.min.css" />
-    <link rel="stylesheet" href="assets/css/revolution-slider.css" />
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
-    <link rel="stylesheet" href="assets/css/owl.transitions.css" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <link rel="stylesheet" href="assets/css/main-responsive.css" />
+    <!-- ICON -->
+    <link
+      rel="icon"
+      type="image/ico"
+      href="/profil_desa/assets/images/logo/favicon.ico"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/profil_desa/assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="/profil_desa/assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="/profil_desa/assets/css/animate.min.css" />
+    <link
+      rel="stylesheet"
+      href="/profil_desa/assets/css/revolution-slider.css"
+    />
+    <link rel="stylesheet" href="/profil_desa/assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="/profil_desa/assets/css/owl.transitions.css" />
+    <link rel="stylesheet" href="/profil_desa/assets/css/main.css" />
+    <link rel="stylesheet" href="/profil_desa/assets/css/main-responsive.css" />
+
+    <!-- jQuery -->
+    <script src="/profil_desa/assets/js/jquery-3.1.0.min.js"></script>
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.1.0.min.js"></script>
@@ -465,6 +475,176 @@
         color: #666;
         font-size: 13px;
         line-height: 1.7;
+      }
+      /* =====================================================
+   MOBILE & TABLET PATCH (tambahkan di paling bawah <style>)
+   ===================================================== */
+
+      /* --- Tablet (768 - 991) --- */
+      @media (max-width: 991px) {
+        /* Container jangan terlalu mepet */
+        .container {
+          padding-left: 18px;
+          padding-right: 18px;
+        }
+
+        /* Navbar: tinggi lebih rapih */
+        #navbar-fixed-apecsaos .navbar {
+          min-height: 56px;
+        }
+
+        /* Logo navbar: jangan maksa scale gede di tablet */
+        #navbar-fixed-apecsaos .navbar-brand img {
+          transform: translateX(0) scale(1.25);
+          height: 44px;
+        }
+
+        /* Menu navbar saat collapse/ketekan */
+        #navbar-fixed-apecsaos .navbar-collapse {
+          border-top: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        /* Slider lebih pendek biar gak kepanjangan */
+        .slider-apecsa .tp-banner-container,
+        .slider-apecsa .tp-banner {
+          max-height: 480px;
+          overflow: hidden;
+        }
+
+        /* Card kategori/Periode Kades */
+        .list-categories {
+          margin-bottom: 18px;
+        }
+
+        /* Visi misi padding */
+        .visi-box,
+        .misi-box {
+          padding: 22px;
+        }
+
+        /* APBN: gambar tidak terlalu besar */
+        .apbn-photo-box img {
+          max-width: 420px;
+        }
+
+        /* Testimonial jadi 1 kolom di tablet biar lega */
+        #owl-slide-testimonial .item {
+          padding: 10px 8px;
+        }
+      }
+
+      /* --- Mobile (<= 767) --- */
+      @media (max-width: 767px) {
+        /* Section padding lebih kecil biar ringkas */
+        section {
+          padding: 38px 0;
+        }
+
+        /* Navbar: logo aman, posisi normal */
+        #navbar-fixed-apecsaos .navbar-brand {
+          padding: 8px 10px;
+        }
+        #navbar-fixed-apecsaos .navbar-brand img {
+          transform: none !important; /* penting: matiin scale gede */
+          height: 38px !important;
+        }
+
+        /* Biar tombol burger gak ketabrak */
+        .navbar-toggle {
+          margin-top: 10px;
+          margin-right: 10px;
+        }
+
+        /* Menu dropdown: rapihin link */
+        #navbar-fixed-apecsaos .navbar-nav > li > a {
+          padding: 12px 14px;
+        }
+
+        /* Slider: pendekin lagi */
+        .slider-apecsa .tp-banner-container,
+        .slider-apecsa .tp-banner {
+          max-height: 360px;
+          overflow: hidden;
+        }
+
+        /* Periode Kades: 1 kolom, center */
+        .box-categories {
+          text-align: center;
+        }
+        .box-categories > [class*="col-"] {
+          display: block !important;
+          width: 100% !important;
+          max-width: 420px;
+          margin: 0 auto 18px;
+          text-align: left;
+        }
+
+        /* Foto kades kamu sudah ada, tapi biar lebih pas */
+        .kades-photo img {
+          width: 140px;
+          height: 140px;
+        }
+
+        /* Visi & misi jadi stack */
+        .visi-box,
+        .misi-box {
+          padding: 18px;
+        }
+        .visi-text {
+          font-size: 15px;
+          line-height: 1.9;
+        }
+        .misi-list {
+          padding-left: 18px;
+        }
+
+        /* APBN: stack & center */
+        .apbn-wrapper {
+          gap: 18px;
+        }
+        .apbn-info h3 {
+          font-size: 18px;
+          line-height: 1.4;
+        }
+        .apbn-photo-box img {
+          max-width: 320px;
+        }
+
+        /* Modal APBN: padding kecil */
+        .apbn-modal {
+          padding: 10px;
+        }
+        .apbn-modal-card {
+          width: 98vw;
+          border-radius: 14px;
+        }
+
+        /* Testimonial: tombol next/prev jangan mepet */
+        .testimonial-client .text-center .btn {
+          margin: 8px 6px;
+        }
+
+        /* Footer logo jangan kebesaran */
+        footer.footer-wrapper .box-footer .image img {
+          width: 260px;
+        }
+
+        /* Back to top jangan ketutup */
+        #back-to-top {
+          right: 14px;
+          bottom: 14px;
+        }
+      }
+
+      /* --- Mobile kecil (<= 360) --- */
+      @media (max-width: 360px) {
+        .apbn-info h3 {
+          font-size: 16px;
+        }
+        .kades-photo img {
+          width: 120px;
+          height: 120px;
+        }
       }
     </style>
   </head>
@@ -1092,13 +1272,13 @@
     </div>
 
     <!-- JS -->
-    <script src="assets/js/bootstrap.js"></script>
-    <script src="assets/js/jquery.scrolltofixed.js"></script>
-    <script src="assets/js/revolution.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/owl.carousel.js"></script>
-    <script src="assets/js/jquery.scrollspeed.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="/profil_desa/assets/js/bootstrap.js"></script>
+    <script src="/profil_desa/assets/js/jquery.scrolltofixed.js"></script>
+    <script src="/profil_desa/assets/js/revolution.min.js"></script>
+    <script src="/profil_desa/assets/js/wow.min.js"></script>
+    <script src="/profil_desa/assets/js/owl.carousel.js"></script>
+    <script src="/profil_desa/assets/js/jquery.scrollspeed.js"></script>
+    <script src="/profil_desa/assets/js/main.js"></script>
 
     <script>
       // Tahun otomatis
