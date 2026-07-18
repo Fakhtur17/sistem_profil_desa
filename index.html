@@ -56,27 +56,17 @@
     <!-- HAPUS <base href="/profil_desa/"> -->
 
     <!-- ICON -->
-    <link
-      rel="icon"
-      type="image/ico"
-      href="/profil_desa/assets/images/logo/favicon.ico"
-    />
+    <link rel="icon" type="image/ico" href="assets/images/logo/favicon.ico" />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/profil_desa/assets/css/bootstrap.css" />
-    <link rel="stylesheet" href="/profil_desa/assets/css/font-awesome.css" />
-    <link rel="stylesheet" href="/profil_desa/assets/css/animate.min.css" />
-    <link
-      rel="stylesheet"
-      href="/profil_desa/assets/css/revolution-slider.css"
-    />
-    <link rel="stylesheet" href="/profil_desa/assets/css/owl.carousel.css" />
-    <link rel="stylesheet" href="/profil_desa/assets/css/owl.transitions.css" />
-    <link rel="stylesheet" href="/profil_desa/assets/css/main.css" />
-    <link rel="stylesheet" href="/profil_desa/assets/css/main-responsive.css" />
-
-    <!-- jQuery -->
-    <script src="/profil_desa/assets/js/jquery-3.1.0.min.js"></script>
+    <link rel="stylesheet" href="assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="assets/css/font-awesome.css" />
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/revolution-slider.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.css" />
+    <link rel="stylesheet" href="assets/css/owl.transitions.css" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <link rel="stylesheet" href="assets/css/main-responsive.css" />
 
     <!-- jQuery -->
     <script src="assets/js/jquery-3.1.0.min.js"></script>
@@ -88,6 +78,24 @@
       /* Biar section enak di mobile */
       body {
         overflow-x: hidden;
+      }
+      #navbar-fixed-apecsaos .navbar {
+        min-height: 50px;
+      }
+
+      /* BRAND TETAP NORMAL */
+      #navbar-fixed-apecsaos .navbar-brand {
+        padding: 5px 5px;
+      }
+
+      /* LOGO SAJA YANG DIBESARKAN */
+      #navbar-fixed-apecsaos .navbar-brand img {
+        height: 42px; /* dasar */
+        width: auto;
+        display: block;
+
+        transform: translateX(-80px) scale(7.5);
+        transform-origin: left center;
       }
 
       /* Navbar brand image responsive */
@@ -372,33 +380,6 @@
           margin-bottom: 20px;
         }
       }
-
-      /* NAVBAR TIDAK DIUBAH */
-      #navbar-fixed-apecsaos .navbar {
-        min-height: 50px;
-      }
-
-      /* BRAND TETAP NORMAL */
-      #navbar-fixed-apecsaos .navbar-brand {
-        padding: 5px 5px;
-      }
-
-      /* LOGO SAJA YANG DIBESARKAN */
-      #navbar-fixed-apecsaos .navbar-brand img {
-        height: 42px; /* dasar */
-        width: auto;
-        display: block;
-        transform: translateX(-80px) scale(7.5);
-        transform-origin: left center;
-      }
-
-      /* ========= FIX LOGO FOOTER (BIAR AMAN DAN GAK IKUT KEPAKSA) ========= */
-      footer.footer-wrapper .box-footer .image img {
-        width: 400px; /* atur sesuai kebutuhan */
-        height: auto;
-        transform: none !important;
-      }
-
       /* =========================
          MODAL ZOOM FOTO APBN
          ========================= */
@@ -488,22 +469,6 @@
           padding-right: 18px;
         }
 
-        /* Navbar: tinggi lebih rapih */
-        #navbar-fixed-apecsaos .navbar {
-          min-height: 56px;
-        }
-
-        /* Logo navbar: jangan maksa scale gede di tablet */
-        #navbar-fixed-apecsaos .navbar-brand img {
-          transform: translateX(0) scale(1.25);
-          height: 44px;
-        }
-
-        /* Menu navbar saat collapse/ketekan */
-        #navbar-fixed-apecsaos .navbar-collapse {
-          border-top: 1px solid rgba(0, 0, 0, 0.08);
-        }
-
         /* Slider lebih pendek biar gak kepanjangan */
         .slider-apecsa .tp-banner-container,
         .slider-apecsa .tp-banner {
@@ -538,26 +503,6 @@
         /* Section padding lebih kecil biar ringkas */
         section {
           padding: 38px 0;
-        }
-
-        /* Navbar: logo aman, posisi normal */
-        #navbar-fixed-apecsaos .navbar-brand {
-          padding: 8px 10px;
-        }
-        #navbar-fixed-apecsaos .navbar-brand img {
-          transform: none !important; /* penting: matiin scale gede */
-          height: 38px !important;
-        }
-
-        /* Biar tombol burger gak ketabrak */
-        .navbar-toggle {
-          margin-top: 10px;
-          margin-right: 10px;
-        }
-
-        /* Menu dropdown: rapihin link */
-        #navbar-fixed-apecsaos .navbar-nav > li > a {
-          padding: 12px 14px;
         }
 
         /* Slider: pendekin lagi */
@@ -644,6 +589,54 @@
         .kades-photo img {
           width: 120px;
           height: 120px;
+        }
+      }
+      /* =====================================================
+   FIX: Step "Transparansi / Layanan" agar kecil di MOBILE
+   (DESKTOP tidak berubah)
+   ===================================================== */
+      @media (max-width: 767px) {
+        /* rapetin jarak antar item step */
+        .stepwizard-row {
+          gap: 10px;
+        }
+
+        /* tiap item step: lebih kecil */
+        .stepwizard-step {
+          flex: 1 1 110px; /* tadinya 160px */
+          max-width: 150px; /* tadinya 220px */
+        }
+
+        /* tombol bulatnya diperkecil */
+        .stepwizard-step .btn-circle {
+          width: 46px;
+          height: 46px;
+          padding: 0;
+          line-height: 46px;
+          border-radius: 50%;
+        }
+
+        /* icon di dalam tombol */
+        .stepwizard-step .btn-circle i {
+          font-size: 16px;
+        }
+
+        /* tulisan "Transparansi / Layanan / ..." */
+        .stepwizard-step p {
+          margin-top: 8px;
+          font-size: 12px;
+          line-height: 1.2;
+        }
+      }
+
+      /* ekstra untuk hp kecil banget */
+      @media (max-width: 360px) {
+        .stepwizard-step {
+          flex: 1 1 95px;
+          max-width: 125px;
+        }
+        .stepwizard-step p {
+          font-size: 11px;
         }
       }
     </style>
@@ -960,7 +953,7 @@
             <div class="apbn-photo-box">
               <img
                 id="apbnThumb"
-                src="assets/images/client/apbn.jpeg"
+                src="assets/images/client/APBN (2).jpeg"
                 alt="Infografis APBN Desa Susukan"
               />
             </div>
@@ -990,7 +983,7 @@
             <div class="apbn-modal-body">
               <img
                 id="apbnModalImg"
-                src="assets/images/client/apbn.jpeg"
+                src="assets/images/client/APBN (2).jpeg"
                 alt="Preview APBN Desa Susukan"
               />
             </div>
@@ -1272,13 +1265,13 @@
     </div>
 
     <!-- JS -->
-    <script src="/profil_desa/assets/js/bootstrap.js"></script>
-    <script src="/profil_desa/assets/js/jquery.scrolltofixed.js"></script>
-    <script src="/profil_desa/assets/js/revolution.min.js"></script>
-    <script src="/profil_desa/assets/js/wow.min.js"></script>
-    <script src="/profil_desa/assets/js/owl.carousel.js"></script>
-    <script src="/profil_desa/assets/js/jquery.scrollspeed.js"></script>
-    <script src="/profil_desa/assets/js/main.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/jquery.scrolltofixed.js"></script>
+    <script src="assets/js/revolution.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/owl.carousel.js"></script>
+    <script src="assets/js/jquery.scrollspeed.js"></script>
+    <script src="assets/js/main.js"></script>
 
     <script>
       // Tahun otomatis
